@@ -1,0 +1,29 @@
+{
+	"remoteId": "a64e9fede92c55932ce82d77891f77a1f015a9f1",
+	"patchLevelId": "0",
+	"updatePollInterval": 1800,
+	"updateServerUrl": "http://fs360.us.to:8000",
+
+	"workingBuildBackupDir": "<appdata>/.working/",
+	"tmpDownloadDir": "<appdata>/.tmp/",
+	"currentBuildDir": "<appdata>/build/",
+
+	"userDataCacheDir": "<build>/data/cache/user/",
+	"bundleDataDir": "<build>/bundles/",
+	"examDataDir": "<build>/bundles/content/GER_EXAM_DATA/",
+
+	"examVideosDir": "<sdcard>/videos/training/",
+	"driveVrVideosDir": "<sdcard>/videos/training/",
+	"tutorialVideosDir": "<sdcard>/videos/tutorial/",
+	"menuVideosDir": "<sdcard>/videos/dome/",
+
+
+	"settings_package": 			"com.android.settings",
+	"settings_screencast_activity": 	"com.android.settings.picovr.PvrWifiDisplaySettings",
+	"settings_wifi_activity":		"com.android.settings.wifi.WifiSettings",
+	
+	"backend_address":			"https://fs360-dev.duckdns.org/",
+	
+	"device_defaultName":			"VR-Yvonne",
+
+}

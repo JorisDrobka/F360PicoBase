@@ -1,0 +1,39 @@
+
+
+
+lecture
+        group:      1
+        index:      2
+        title:      Gefahrenerkennung
+        difficulty: 1 
+
+
+sequence 1
+    meta
+        mode360:        Load
+
+    task
+        ge:             true
+        ge-guides:      true
+
+    audio
+        name:           xxx
+
+
+    video
+        id:             260
+        timing:         x-x
+
+sequence 2
+    meta
+        mode360:        Load
+    
+    task
+        ge:             true
+        ge-guides:      true
+    
+    audio:
+        name:           xxx
+    
+    video:
+        id:             140

@@ -1,0 +1,43 @@
+﻿[ 224 ]
+meta
+	id:		224
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	24,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R+:		12-14		(Richtung rechts)
+	R:		12-15,5		(Richtung links)
+	IS:		14-17		(anhalten)
+	IS:		17-19,5		(losfahren)
+
+gefahren
+	PKW:	12-16[13,5+15]	(mini)
+
+
+
+
+
+[ 228 ]
+meta
+	id:		228
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	34,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	13,00
+
+blickanalyse
+	IS:		9-13	@A1
+	AR:		9-13	@A1
+	B:		11-21			(Rad)
+	SR:		20-24	@A1
+	IS:		30,5-34	@A1
+
+
+
+
+

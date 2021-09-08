@@ -11,7 +11,9 @@ using System.Collections;
 using Pvr_UnitySDKAPI;
 
 public class Pvr_ControllerDemo : MonoBehaviour
-{
+{   
+    #pragma warning disable
+
     public GameObject HeadSetController;
     public GameObject controller0;
     public GameObject controller1;
@@ -36,6 +38,8 @@ public class Pvr_ControllerDemo : MonoBehaviour
     private bool isHasController = false;
     private bool headcontrolmode = false;
     private RaycastHit hit;
+
+    #pragma warning restore
 
     void Start()
     {

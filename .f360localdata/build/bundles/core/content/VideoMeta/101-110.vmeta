@@ -1,0 +1,195 @@
+﻿[ 101 ]
+meta
+	id:		101
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	20,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	8,00
+	R:	15,50
+
+blickanalyse
+	IS:		4-8	@U1
+	AL:		4-8	@U1
+	SL:		6-9	@U1
+	IS:		11-13,75	@U1
+	AR:		12-15,5	@U1
+	SR:		14-17	@U1
+	IS:		17-19,5	@U1
+
+
+
+
+
+[ 102 ]
+meta
+	id:		102
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	19,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	AL:		0- 4	@U1
+	SL:		3-6	@U1
+	IS:		7,5-9	@U1
+	B-{N}:		9,2-11 [0,3]	<Gegenverkehr>
+	AR:		11-13	@U1
+	SR:		11-13,5	@U1
+	IS:		15,5-18	@U1
+
+
+
+
+
+[ 103 ]
+meta
+	id:			103
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	19,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	5,50
+	R:	12,50
+
+blickanalyse
+	AL:		1,5-5,5	@U1
+	SL:		5,5-8	@U1
+	IS:		10-11,75	@U1
+	AR:		11,5-13,5	@U1
+	SR:		11,5-14	@U1
+	IS:		16-18,5	@U1
+
+
+
+
+
+[ 104 ]
+meta
+	id:			104
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	13,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	R:		0-6			(nach links)
+	[<<] R:		0-6			(nach rechts)
+	SL:		5,5-7,5
+	IS:		10-13
+
+gefahren
+	PKW:	0-5,7[2+4]	(blauer PKW)
+
+
+
+
+
+[ 105 ]
+meta
+	id:		105
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	15,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AL:		5-9
+	IS:		9-12
+
+
+
+
+
+[ 106 ]
+meta
+	id:		106
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	16,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	B:		6-12,5 [1]		(links in Kreisverkehr)
+	IS:		12-14		(losfahren)
+
+gefahren
+	PKW:	3,7-11,6[6+9,7]	(blauer PKW)
+
+
+
+
+
+[ 107 ]
+meta
+	id:		107
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	26,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	8,00
+
+blickanalyse
+	AR:		4-8	@A1
+	B:		10-16 [1]
+	IS:		12-15
+	SR:		16-20	@A1
+
+gefahren
+	UNDEFINED:	9,5-15[11,7+13,3]	(Fußgängergruppe)
+
+
+
+
+
+[ 108 ]
+meta
+	id:		108
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	17,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	12,00
+
+blickanalyse
+	B:		2-5 [1]		(links in Kreisverkehr)
+	AR:		7,5-10,5	@A1
+	SR:		10-12	@A1
+	IS:		14-17	@A1
+
+
+
+
+
+[ 109 ]
+meta
+	id:		109
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	22,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	B:		7,5-12		(auto)
+	IS:		11-14,5
+	IS:		17,5-21,5
+
+gefahren
+	PKW:	12-15[Q]	(blauer PKW)
+
+
+
+
+

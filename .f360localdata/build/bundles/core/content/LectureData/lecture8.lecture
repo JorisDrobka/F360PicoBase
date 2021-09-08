@@ -1,0 +1,76 @@
+lecture
+        group:      3
+		index:      3
+        title:      Schulterblick
+        difficulty: 1 
+
+
+
+sequence 1
+    meta
+        mode360:    Load
+    video2D
+        file:       xxx
+
+
+
+sequence 2
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  SL, SR
+    video
+        id:         214
+
+
+
+sequence 3
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  SL, SR
+    video
+        id:         258
+
+
+
+sequence 4
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  SL, SR
+    video
+        id:         256
+
+
+
+sequence 5
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  SL, SR
+    video
+        id:         103
+
+
+sequence 6
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  SL, SR
+    video
+        id:         134
+    audio
+        id:         xxx
+
+
+sequence 7
+    gui
+        id:         result
+    audio
+        id:         xxx

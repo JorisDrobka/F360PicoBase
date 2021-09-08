@@ -1,0 +1,90 @@
+﻿[ 242 ]
+meta
+	id:		242
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	27,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	B:		6-18			(Rad)
+	IS:		20-26
+
+
+
+
+
+[ 244 ]
+meta
+	id:		244
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	34,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	6,50
+
+blickanalyse
+	AL:		2,5-6,5	@A1
+	E:		13-18			(Richtung rechts)
+	IS:		17-19		(anhalten)
+	IS:		19,5-21,5		(losfahren)
+	SL:		20-23,5	@A1
+	IS:		29,5-32,5	@A1
+
+gefahren
+	PKW:	15,851-18,119	(transporter)
+
+
+
+
+
+[ 246 ]
+meta
+	id:		246
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	26,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	6,60
+
+blickanalyse
+	!IS
+	IS:		2,5-6,5	@A1
+	AL:		2,5-6,5	@A1
+	SL:		12-15,5	@A1
+	IS:		22,5-25	@A1
+
+
+
+
+
+[ 250 ]
+meta
+	id:		250
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	16,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R links in Kurve:	5-11
+	R rechts in Kurve:	11-14
+	IS:		20,4-24,5
+	AL:		23-26
+	SL:		27,5-29,4
+	IS:		31,9-34
+	B:		31-35			(Fußgänger)
+	IS:		36-42
+	SR:		35,5-38
+
+gefahren
+	Fußgänger:	30,8-34[32+33]	(fußg)
+
+
+
+
+

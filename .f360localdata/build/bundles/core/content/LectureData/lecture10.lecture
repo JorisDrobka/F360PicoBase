@@ -1,0 +1,44 @@
+lecture
+        group:      4
+        index:      2
+        title:      Abbiegen
+        difficulty: 1 
+
+
+
+sequence 1
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-guide:   true
+    video
+        id:         2
+    audio
+        id:         xxx
+
+
+sequence 2
+    meta
+        mode360:    Load
+    task
+        ba:         true
+    video
+        id:         XXX
+
+
+
+sequence 3
+    meta
+        mode360:    Load
+    task
+        ba:         true
+    video
+        id:         XXX
+
+
+sequence 4
+    gui
+        id:         result
+    audio
+        id:         xxx

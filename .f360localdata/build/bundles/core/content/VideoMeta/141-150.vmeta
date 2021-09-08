@@ -1,0 +1,41 @@
+﻿[ 141 ]
+meta
+	id:		141
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	25,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E:		13-17			(Rechts in Straße - nicht Roller)
+	IS:		16-18		(anhalten)
+	IS:		20-23		(losfahren)
+
+gefahren
+	UNDEFINED:	14,7-17[16+17]	(roter roller)
+
+
+
+
+
+[ 144 ]
+meta
+	id:		144
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	28,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E+:		5-7 [1,5]		(Rechts in Straße)
+	B-:		7-12 [2]		(Kinder)
+	IS:		12-14
+	IS:		18-23
+
+gefahren
+	Kind:	11,6-14,2[Q]	(Ball)
+
+
+
+
+

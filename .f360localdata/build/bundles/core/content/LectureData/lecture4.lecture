@@ -1,0 +1,20 @@
+
+lecture
+        group:      2
+        index:     	1
+        title:      Fahrtvorbereitung
+        difficulty: 1 
+
+
+sequence 1
+    meta
+        mode360:        Load
+
+    task
+	ba:             true
+
+    question
+        official:       xxx
+
+    video
+        id:             xxx

@@ -21,6 +21,7 @@ public class Pvr_UnitySDKManager : MonoBehaviour
 {
 
     /************************************    Properties  *************************************/
+    #pragma warning disable
     #region Properties
     public static PlatForm platform;
     bool BattEnable = false;
@@ -481,7 +482,7 @@ public class Pvr_UnitySDKManager : MonoBehaviour
     public static SDKStereoRendering StereoRendering { get; private set; }
 
     #endregion
-
+    #pragma warning restore
 
     /************************************ Private Interfaces  *********************************/
 

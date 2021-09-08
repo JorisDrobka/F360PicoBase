@@ -58,6 +58,7 @@ public class Pvr_UnitySDKEyeManager : MonoBehaviour
             return overlays;
         }
     }
+    #pragma warning disable
     [HideInInspector]
     public Camera LeftEyeCamera;
     [HideInInspector]
@@ -117,6 +118,8 @@ public class Pvr_UnitySDKEyeManager : MonoBehaviour
     public float FoveationAreaValue = 0.0f;
     [HideInInspector]
     public float FoveationMinimumValue = 0.0f;
+
+    #pragma warning restore
     #endregion
 
     /************************************ Process Interface  *********************************/
@@ -304,6 +307,9 @@ public class Pvr_UnitySDKEyeManager : MonoBehaviour
 
     /************************************  End Of Per Frame  *************************************/
     // for eyebuffer params
+
+    #pragma warning disable
+
     private int eyeTextureId = 0;
     private RenderEventType eventType = RenderEventType.LeftEyeEndFrame;
 
@@ -311,6 +317,8 @@ public class Pvr_UnitySDKEyeManager : MonoBehaviour
     private int underlayLayerDepth = 0;
     private bool isHeadLocked = false;
     private int layerFlags = 0;
+
+    #pragma warning restore
 
     IEnumerator EndOfFrame()
     {

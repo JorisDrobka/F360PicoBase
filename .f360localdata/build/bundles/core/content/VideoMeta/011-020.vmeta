@@ -1,0 +1,163 @@
+﻿[ 011 ]
+meta
+	id:		11
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	17,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		9-14
+
+
+
+
+
+[ 013 ]
+meta
+	id:		13
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	18,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	R:		0-8			(Richtung rechts)
+	[<<] R:		0-8			(Richtung links)
+	SL:		7-10,5
+	IS:		14,5-18
+
+gefahren
+	Fahrrad:	2,3-6,5[4+5,7]	(rad)
+
+
+
+
+
+[ 014 ]
+meta
+	id:		14
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	19,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	SR:		0-4
+	SR:		11-14
+	IS:		16-19,5
+
+gefahren
+	Fußgänger:	2,7-8[4,4+6,2]	(fußg)
+
+
+
+
+
+[ 015 ]
+meta
+	id:		15
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	28,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	11,00
+
+blickanalyse
+	IS:		7-11	@V1
+	AL:		7-11	@V1
+	IS:		13-17		(anhalten)
+	IS:		19-21,5		(losfahren)
+	SL:		20-23	@V1
+	IS:		24-28	@V1
+
+gefahren
+	PKW:	9,9-15[12+14,5]	(engegenk Auto)
+
+
+
+
+
+[ 016 ]
+meta
+	id:		16
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	27,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	AL:		0-4	@A1
+	R:		9,5-12		(rechts in Straße)
+	R:		12-14,5		(links in Straße)
+	SL:		15-19	@A1
+	IS:		23,5-27	@A1
+
+gefahren
+	Fußgänger:	0-12,8[4,3+10,8]	(fußg)
+	UNDEFINED:	0-11,7[4+10,2]
+
+
+
+
+
+[ 018 ]
+meta
+	id:		18
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	25,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	5,00
+
+blickanalyse
+	AR:		1-5	@A1
+	R:		9-12			(rechts in Straße)
+	IS:		12-14		(anhalten/losfahren)
+	SR:		14-17	@A1
+	IS:		22,5-25	@A1
+
+gefahren
+	Fußgänger:	0-10,4[8,6+10,4]	(nathalie)
+	UNDEFINED:	6,4-11[8+10]
+
+
+
+
+
+[ 020 ]
+meta
+	id:		20
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	AL:		0-4	@A1
+	IS:		6-11			(anhalten)
+	R:		12-22			(links in Straße)
+	IS:		21-24		(losfahren)
+	SL:		22-26	@A1
+	IS:		28,8-31	@A1
+
+gefahren
+	Fahrrad:	4,4-14[9+11,5]	(rad)
+	PKW:	15,5-18[17,2+18]	(Auto1)
+	UNDEFINED:	17,7-20,5[19,5+20,5]	(Auto2)
+
+
+
+
+

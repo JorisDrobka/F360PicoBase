@@ -1,0 +1,214 @@
+﻿[ 261 ]
+meta
+	id:		261
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	49,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,50
+
+blickanalyse
+	AR:		0-4
+	SR:		4-7
+	IS:		7-10
+
+
+
+
+
+[ 262 ]
+meta
+	id:		262
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	21,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AL:		0-10
+	IS:		10-20
+
+
+
+
+
+[ 263 ]
+meta
+	id:		263
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	53,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	7,50
+	L:	28,00
+
+blickanalyse
+	AR:		3,5-7,5	@S1
+	SR:		7-10	@S1
+	AL:		12,5-14,5
+	IS:		14-17,5	@S1
+	IS:		19,5- 22
+	IS:		24-28	@S2
+	AL:		24-28	@S2
+	IS:		27,9-30,3
+	AL:		30-33,4
+	SL:		35-37	@S2
+	IS:		40,5-44,5	@S2
+	V{N}:		44,6-48,8 [0]
+	IS:		49-53
+
+
+
+
+
+[ 264 ]
+meta
+	id:		264
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		10-20
+	IS:		20-30
+
+
+
+
+
+[ 265 ]
+meta
+	id:		265
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	36,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	R:		0-4			(links aus Fenster)
+	E:		1,8-27 [0]	<Hinten>		(hinteres Seitenfenster)
+	E:		26-33	<Vorne>		(auf Straße)
+	IS:		33-36
+
+gefahren
+	PKW:	9,5-12,3	(PKW)
+
+
+
+
+
+[ 266 ]
+meta
+	id:		266
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	SL:		0-4
+	AR:		6-9
+	SR:		8-10
+
+
+
+
+
+[ 267 ]
+meta
+	id:		267
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	35,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,50
+
+blickanalyse
+	AL:		0-5
+	SL:		9-11
+	E:		16,6-26,1	<Hinten>		(hinteres Seitenfenster)
+	R:		26,1-29		(links aus Fenster)
+	IS:		32-35
+
+
+
+
+
+[ 268 ]
+meta
+	id:		268
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	26,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,30
+
+blickanalyse
+	AL:		0-4
+	R:		8-10			(IN Straße sehen)
+	SL:		8-11
+	AL:		19-21,5
+	IS:		21,2-26
+
+
+
+
+
+[ 269 ]
+meta
+	id:		269
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	1:01,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	8,00
+
+blickanalyse
+	R:		6-8			(rechts in Straße)
+	IS:		12-15,5
+	E:		17-27		(Seitenfenster rechts)
+	AR-:		27-44 [1,5]
+	AL:		43-48
+	SL:		48-51
+	IS:		55-60
+
+
+
+
+
+[ 270 ]
+meta
+	id:		270
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	23,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	AL:		0-4	@A1
+	SL:		7-10	@A1
+	IS:		13,5-15,5	@A1
+	IS:		18,7-22
+
+gefahren
+	Fußgänger:	12,3-15,2	(fußg)
+
+
+
+
+

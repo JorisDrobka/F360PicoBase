@@ -1,0 +1,132 @@
+﻿[ 031 ]
+meta
+	id:		31
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	27,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	SL:		0-4	@A1
+	IS:		6,5-9,5	@A1
+	B-:		7-23 [0]		(Kind mit Hund)
+	IS:		23-27
+
+gefahren
+	UNDEFINED:: 7-16[10+12]	(kein video)
+
+
+
+
+
+[ 033 ]
+meta
+	id:		33
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	20,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		10,4-13,5
+
+gefahren
+	UNDEFINED:	9,7-12,7[Q]{1}	(Ampel L)
+	UNDEFINED:	9,7-12,7[Q]{1}	(Ampel R)
+
+
+
+
+
+[ 034 ]
+meta
+	id:		34
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	20,00
+	difficulty:	UNDEFINED
+
+
+
+
+
+[ 035 ]
+meta
+	id:		35
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	26,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		10-12,5		(vor Kreuzung)
+	R:		12,6-15		(rechts in Straße)
+	IS:		18-21		(losfahren)
+
+gefahren
+	PKW:	12,6-15,8[13,4+14,2]	(PKW)
+
+
+
+
+
+[ 036 ]
+meta
+	id:		36
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	24,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		8-11
+	B-:		10-16		(Fußgänger)
+	R:		16-19		(links in Straße)
+	SR:		16-19
+	IS:		19-24
+
+gefahren
+	Fußgänger:	5,4-11,5[8+10]	(fußg)
+
+
+
+
+
+[ 039 ]
+meta
+	id:		39
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AR:		2-8	@A1
+	IS:		9-13			(anhalten)
+	IS:		15-20		(losfahren)
+	E:		19-23			(links)
+	SR:		21-25,5	@A1
+	IS:		28-30,5	@A1
+
+
+
+
+
+[ 040 ]
+meta
+	id:		40
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	14,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		7-11
+
+gefahren
+	UNDEFINED:	7,2-10[8,5+10]	(Ampel, beide mgl)
+
+
+
+
+

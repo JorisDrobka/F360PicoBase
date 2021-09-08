@@ -1,0 +1,138 @@
+﻿[ 213 ]
+meta
+	id:		213
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	21,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R:		6,5-11		(Richtung links)
+	IS:		10-13		(anhalten)
+	IS:		13,5-18		(losfahren)
+
+gefahren
+	Fußgänger:	6,5-9[7,5+8,5]	(fußg)
+	UNDEFINED:	8-13,3[9,3+11,3]	(rad)
+
+
+
+
+
+[ 214 ]
+meta
+	id:		214
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	24,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	6,00
+
+blickanalyse
+	AR:		0-4	@A1
+	SR:		7-11	@A1
+	SR:		14-16
+	IS:		20-24	@A1
+
+
+
+
+
+[ 215 ]
+meta
+	id:		215
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	26,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,50
+
+blickanalyse
+	AR:		0,5-4,5	@A1
+	AR:		8-14	@A1
+	SR:		13-15	@A1
+	IS:		20,5-26	@A1
+
+gefahren
+	Fahrrad:	6,8-15[9,2+14,5]	(rad)
+
+
+
+
+
+[ 216 ]
+meta
+	id:		216
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	19,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	B:		7-13			(Radfahrer)
+	IS:		12-14
+	IS:		15,5-18
+
+gefahren
+	Fahrrad:	12-14,3	(rad)
+
+
+
+
+
+[ 217 ]
+meta
+	id:		217
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	20,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	9,00
+
+blickanalyse
+	SR:		8-11
+	SL:		12-14,5
+	IS:		17-20
+
+gefahren
+	Fahrrad:	6,047-9,544	(rad)
+
+
+
+
+
+[ 218 ]
+meta
+	id:		218
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	46,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	28,70
+
+blickanalyse
+	B:		8-14			(Bus Warnblinker)
+	IS:		14-16
+	B:		22-28			(Fahrbahn geradeaus)
+	IS:		25-29	@V1
+	AL:		25-29	@V1
+	SL:		35-37	@V1
+	IS:		40-45	@V1
+
+gefahren
+	Fahrrad:	0,000-3358	(Rad)
+	PKW:	7,608-11,355	(Bus)
+	UNDEFINED:	24,832-31,069	(Auto)
+
+
+
+
+

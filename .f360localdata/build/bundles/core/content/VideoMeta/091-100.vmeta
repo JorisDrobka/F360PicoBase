@@ -1,0 +1,209 @@
+﻿[ 091 ]
+meta
+	id:		91
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	21,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	AL:		0-4	@A1
+	SL:		5,5-8,5	@A1
+	IS:		12-15	@A1
+	IS:		15,5-21
+
+gefahren
+	Fußgänger:	9,3-13,3[11+12]	(fußg)
+
+
+
+
+
+[ 092 ]
+meta
+	id:		92
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	28,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	14,00
+
+blickanalyse
+	IS:		9-14
+	AR:		10-14	@A1
+	R:		16-19 [1]
+	SR:		19-21	@A1
+	IS:		23-27,5	@A1
+
+gefahren
+	UNDEFINED:	24,4-26,7[Q]	(Ampel)
+
+
+
+
+
+[ 093 ]
+meta
+	id:		93
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	17,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	B-{W}:		0-4,2 [0]		(Mann rechts)
+	IS:		14,8-17,8
+
+gefahren
+	Fußgänger:	3-6[4+5]	(Mann)
+
+
+
+
+
+[ 094 ]
+meta
+	id:		94
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	23,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	12,00
+
+blickanalyse
+	IS:		8-12
+	AR:		8-12
+	SR:		11-14
+	SL:		15-18
+	IS:		19,5-23
+
+
+
+
+
+[ 095 ]
+meta
+	id:		95
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	21,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	B-:		8,5-12,5 [1]		(zu blauen BMW)
+	IS:		12-14
+	IS:		16-21
+
+gefahren
+	PKW:	3-12[7+10]	(blauer PKW)
+
+
+
+
+
+[ 096 ]
+meta
+	id:		96
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	22,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AR:		4-7
+	SR:		4-7
+	IS:		10-20
+	E:		13-22,04 [0,5]
+
+
+
+
+
+[ 097 ]
+meta
+	id:		97
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	22,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	6,50
+
+blickanalyse
+	AL:		2,5-6,5	@A1
+	SL:		11-13,5	@A1
+	IS:		17,5-22	@A1
+
+
+
+
+
+[ 098 ]
+meta
+	id:		98
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	27,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E:		8-18,5		(Straße links)
+	[<<] E:		8-18,5		(Straße rechts)
+	IS:		18-22		(losfahren)
+
+
+
+
+
+[ 099 ]
+meta
+	id:		99
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	17,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R+:		7-10 [1]		(rechts)
+	IS:		10-13
+
+gefahren
+	PKW:	7,6-9,6[Q]	(blauer PKW)
+
+
+
+
+
+[ 100 ]
+meta
+	id:		100
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	24,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,00
+
+blickanalyse
+	AR:		0-4	@A1
+	SR:		7-10	@A1
+	B:		10-14			(Fußgänger)
+	SR:		15-18
+	IS:		21,6-24	@A1
+
+gefahren
+	Fußgänger:	11,6-13,5[Q]	(Fußgängerin Ampel)
+
+
+
+
+

@@ -16,6 +16,8 @@ using LitJson;
 
 public class Pvr_ControllerInit : MonoBehaviour
 {
+    #pragma warning disable
+
     private ControllerVariety Variety;
     private bool isCustomModel = false;
     [SerializeField]
@@ -40,6 +42,8 @@ public class Pvr_ControllerInit : MonoBehaviour
     private JsonData curControllerData;
     private int curControllerNum = 1;
     private string modelName = "";
+
+    #pragma warning restore
 
     void Awake()
     {

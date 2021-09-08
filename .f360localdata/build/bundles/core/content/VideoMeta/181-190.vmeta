@@ -1,0 +1,81 @@
+﻿[ 183 ]
+meta
+	id:		183
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		10-14
+	IS:		21,5-23
+	IS:		23,5-26,5
+
+gefahren
+	Fußgänger:	20,6-23[22]	(Jogger)
+
+
+
+
+
+[ 184 ]
+meta
+	id:		184
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	22,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	!IS
+	AL+:		3-10 [5]
+	SL:		9-12,5
+	IS:		19-22
+
+
+
+
+
+[ 185 ]
+meta
+	id:		185
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	14,00
+	difficulty:	UNDEFINED
+
+
+
+
+
+[ 186 ]
+meta
+	id:		186
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	18,00
+	difficulty:	UNDEFINED
+
+
+
+
+
+[ 187 ]
+meta
+	id:		187
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	16,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	F-{E}:		4-8 [0,5]		(links in Kurve)
+	F-{W}:		11-14 [0,5]	(rechts in Kurve)
+
+
+
+
+

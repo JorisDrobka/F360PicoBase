@@ -1,0 +1,53 @@
+
+
+lecture
+		group:      1
+    	index:      1
+    	title:      Blickverhalten
+    	difficulty: 1 
+
+
+
+sequence 1
+    meta
+        mode360:        Load
+	command:	ba[1] pause run gui run audio1 wait user
+	command:	ba[2] pause run gui run audio2 wait user
+
+    task
+        ba:             true
+        ba-guides:      true
+	
+
+    audio 1
+        name:           xxx
+		timing:			x-x
+	audio 2
+		name:			xxx
+		timing:			x-x
+	gui
+		id:			text
+		text:			Blicke in den Innenspiegel
+
+    video
+        id:             253
+        timing:         x-x
+
+
+sequence 2
+    gui
+        id:             result
+
+
+
+sequence 3
+    meta
+        mode360:        Continue
+
+    task
+        ba:             true
+        ba-guides:      true
+    
+    video
+        id:             253
+        timing:         x-x

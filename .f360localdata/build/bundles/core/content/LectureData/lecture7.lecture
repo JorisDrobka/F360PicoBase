@@ -1,0 +1,55 @@
+lecture
+        group:      3
+        index:      2
+        title:      Außenspiegel
+        difficulty: 1 
+
+
+
+sequence 1
+    meta
+        mode360:    Load
+    video2D
+        file:       xxx
+
+
+
+sequence 2
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  AL, AR
+    video
+        id:         169
+
+
+
+sequence 3
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  AL, AR
+    video:
+        id:         228
+
+
+
+sequence 4
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  AL, AR
+    video
+        id:         153
+
+
+
+
+sequence 5
+    gui
+        id:         result
+    audio
+        id:         xxx

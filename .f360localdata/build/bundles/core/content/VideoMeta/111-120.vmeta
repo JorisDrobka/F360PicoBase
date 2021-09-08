@@ -1,0 +1,154 @@
+﻿[ 111 ]
+meta
+	id:		111
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	5,00
+
+blickanalyse
+	AR:		1-5
+	IS:		9-12
+	H+:		15-20,5 [4]
+	V:		22,5-25		(aufs Auto)
+	R:		25-27,5		(Straße links)
+
+
+
+
+
+[ 113 ]
+meta
+	id:		113
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	22,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,00
+
+blickanalyse
+	AR:		0-4
+	B:		3,5-13		(Kinder)
+	IS:		13-15
+	IS:		17,5-19,5
+	SR:		18-21,5
+
+gefahren
+	Kind:	13-15[Q]	(Kinder)
+
+
+
+
+
+[ 114 ]
+meta
+	id:		114
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	25,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AL:		5-8,5
+	IS:		14-17
+
+
+
+
+
+[ 115 ]
+meta
+	id:		115
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	24,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	8,50
+
+blickanalyse
+	!IS
+	IS:		4,5-8,5
+	AR:		4,5-8,5
+	R:		7-14			(links)
+	[<<] R:		10-14			(rechts)
+	SR:		13,5-16,5
+	IS:		22-24
+
+gefahren
+	Fahrrad:	8-11[9+10]	(Rad)
+
+
+
+
+
+[ 116 ]
+meta
+	id:		116
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	15,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	E:		0-6			(links)
+	SR:		5-8,3
+	IS:		11,5-15
+
+gefahren
+	PKW:	0,000-5,852	(PKW von links)
+
+
+
+
+
+[ 118 ]
+meta
+	id:		118
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	26,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	13,00
+
+blickanalyse
+	AL:		8-13
+	SL:		13-15
+	IS:		18,6-23
+
+gefahren
+	PKW:	0-8[4+6]	(PKW gerade aus)
+
+
+
+
+
+[ 119 ]
+meta
+	id:		119
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	42,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	V:		4-23
+	IS:		24-27
+	IS:		31,5-38,5
+
+gefahren
+	Fußgänger:	23,3-25[Q]	(Fußg v.l.)
+
+
+
+
+

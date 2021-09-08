@@ -1,0 +1,63 @@
+﻿
+meta
+	id:		322
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	5:18,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	14,00
+	R:	50,00
+	L:	75,00
+	R:	128,00
+	R:	148,00
+	R:	210,00
+	L:	230,00
+	L:	306,00
+
+blickanalyse
+	SR:		0-6,8
+	IS:		9,7-14	@A1
+	AR:		10-14	@A1
+	SR:		17-23,6	@A1
+	IS:		26-31	@A1
+	IS:		46-50	@A2
+	AR:		46-50	@A2
+	IS:		58-1:01
+	SR:		1:00-1:04	@A2
+	IS:		1:08-1:12	@A2
+	AL:		1:11-1:15	@S1
+	SL:		1:15-1:18	@S1
+	IS:		1:52-1:58
+	SL:		1:59-2:03	@A3
+	IS:		2:05-2:08	@A3
+	AR:		2:05-2:08	@S2
+	SR:		2:07-2:10	@S2
+	IS:		2:24-2:28	@A4
+	AR:		2:24-2:28	@A4
+	IS:		2:32-2:38
+	IS:		2:41-2:44
+	B:		2:42,5-2:45,4	<Fußgänger;beobachten>
+	E:		2:44-2:47		(nach links)
+	SR:		2:47-2:52	@A4
+	IS:		2:54-3:00	@A4
+	B:		3:12-3:14		<Fußgänger;beobachten>
+	IS:		3:12-3:15
+	IS:		3:23-3:30	@A5
+	AR:		3:26-3:30	@A5
+	SR:		3:35-3:40	@A5
+	IS:		3:43-3:47	@A5
+	AL:		3:46-3:50	@A6
+	R:		3:52-3:54		<Geradeaus;einsehen>
+	SL:		3:54-3:59	@A6
+	IS:		4:01-4:05	@A6
+	B:		4:29-4:34,5		<Fußgänger;beobachten>
+	R:		4:42-4:45		(Straße rechts)
+	IS:		5:02-5:06	@A7
+	AL:		5:02-5:06	@A7
+	SL:		5:08-5:12	@A7
+	IS:		5:15-5:18
+
+gefahren
+	Fußgänger:	3:12-3:14[Q]	(Fußgänger rechts Zebrastreifen)

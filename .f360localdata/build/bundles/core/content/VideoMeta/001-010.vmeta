@@ -1,0 +1,211 @@
+﻿[ 001 ]
+meta
+	id:		1
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	19,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+	R:	16,00
+
+blickanalyse
+	AL:		0-4	@S1
+	SL:		5-8,5	@S1
+	AR:		12-16	@S2
+	SR:		15-18	@S2
+
+
+
+
+
+[ 003 ]
+meta
+	id:		3
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	23,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	B:		6-11			(Fußgängerin)
+	IS:		8-12
+	IS:		17-23
+
+gefahren
+	Fußgänger:	5-13 [7+9]	(fußg)
+
+
+
+
+
+[ 004 ]
+meta
+	id:		4
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	17,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,00
+
+blickanalyse
+	AR:		0-4	@A1
+	SR:		3-6,5	@A1
+	IS:		7-9			(anhalten)
+	IS:		10-15	@A1
+
+gefahren
+	Fahrrad:	4,5-8[6,5+8]	(rad)
+
+
+
+
+
+[ 005 ]
+meta
+	id:		5
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	15,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AL:		7-11
+	IS:		10-15
+
+
+
+
+
+[ 006 ]
+meta
+	id:		6
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	23,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,00
+
+blickanalyse
+	AR:		0-4	@A1
+	IS:		7-10,5		(anhalten)
+	E:		10-14,5		(links in Straße)
+	IS:		14-17		(losfahren)
+	SR:		15,5-19	@A1
+
+gefahren
+	UNDEFINED:	9,5-12[Q]	(rad)
+
+
+
+
+
+[ 007 ]
+meta
+	id:		7
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	30,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+	R:	13,00
+
+blickanalyse
+	R:		2-6			(Straße rechts)
+	SL:		4-7	@A1
+	AR:		9-13	@A2
+	E:		14-22			(links in Straße)
+	SR:		21-24	@A2
+
+gefahren
+	Fahrrad:	15,3-18,4[17+18,4]	(rad)
+
+
+
+
+
+[ 008 ]
+meta
+	id:		8
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	24,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	14,00
+
+blickanalyse
+	B{W}:		4-10		(Straße+RAD folgen)
+	IS:		10-14	@V1
+	AL:		10-14	@V1
+	SL:		14-16	@V1
+	IS:		18-23,9	@V1
+
+gefahren
+	PKW:	12,5-14[Q]	(ausscherender PKW)
+
+
+
+
+
+[ 009 ]
+meta
+	id:		9
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	1:00,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,00
+	L:	31,00
+
+blickanalyse
+	AR:		0-4	@A1
+	SR:		3-7	@A1
+	IS:		10-14	@A1
+	AL:		19-22	@V1
+	SL:		21-23	@V1
+	AL:		27-31	@A2
+	R:		40-45			(Richtung rechts)
+	[<<] R:		40-45			(Richtung links)
+	SL:		44-47	@A2
+	IS:		52-56	@A2
+
+
+
+
+
+[ 010 ]
+meta
+	id:		10
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	20,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	8,00
+
+blickanalyse
+	!IS
+	AR:		4-8
+	R:		7-11,7 [1]		(Straße links)
+	[<<] R:		7-11,7 [1]		(Straße rechts)
+	SR:		10-14
+
+gefahren
+	Fußgänger:	0-5[2+3,5]	(fußg)
+
+
+
+
+

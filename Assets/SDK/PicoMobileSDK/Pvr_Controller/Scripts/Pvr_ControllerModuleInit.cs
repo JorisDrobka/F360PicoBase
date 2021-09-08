@@ -19,6 +19,8 @@ namespace Pvr_UnitySDKAPI
 public class Pvr_ControllerModuleInit : MonoBehaviour
 {
     
+    #pragma warning disable 
+
     public ControllerVariety Variety;
     public bool IsCustomModel = false;
     [SerializeField]
@@ -29,6 +31,8 @@ public class Pvr_ControllerModuleInit : MonoBehaviour
     private GameObject controller;
     private int controllerDof = -1;
     private bool moduleState = true;
+
+    #pragma warning restore
 
     void Awake()
     {

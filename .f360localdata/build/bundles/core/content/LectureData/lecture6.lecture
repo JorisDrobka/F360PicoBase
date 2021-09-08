@@ -1,0 +1,192 @@
+lecture
+
+        group:      3
+        index:      1
+        title:      Innenspiegel
+        difficulty: 1 
+
+
+
+sequence 1
+    meta
+        mode360:    Load
+    video2D
+        file:       VF 6
+
+
+sequence 2
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         9
+
+
+
+sequence 3
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         3
+
+
+
+sequence 4
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         2
+
+
+sequence 5
+    audio
+        id:         xxx
+
+
+
+sequence 6
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 7
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 8
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 9
+    audio
+        id:         XXX
+
+
+
+sequence 10
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 11
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 12
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 13
+    audio
+        id:         XXX
+
+
+
+sequence 14
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 15
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 16
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+sequence 17
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 18
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-filter:  IS
+    video
+        id:         XXX
+
+
+
+sequence 19
+
+    gui
+        id:         result
+    audio
+        id:         xxx

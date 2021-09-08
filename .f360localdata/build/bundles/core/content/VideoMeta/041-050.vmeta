@@ -1,0 +1,115 @@
+﻿[ 041 ]
+meta
+	id:		41
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	25,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	AL:		0-4	@A1
+	IS:		10-14
+	SL:		13-18	@A1
+	IS:		22-24,5	@A1
+
+
+
+
+
+[ 042 ]
+meta
+	id:		42
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	16,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	F {E}:		5-9		(links in Kurve)
+	F {W}:		11-14		(rechts in Kurve)
+
+
+
+
+
+[ 043 ]
+meta
+	id:		43
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	15,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	F {W}:		5-11		(rechts in Kurve)
+	IS:		11-14
+
+gefahren
+	PKW:	10-14[11,5+13]	(PKW)
+
+
+
+
+
+[ 044 ]
+meta
+	id:		44
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	27,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AR:		14-20
+	B-:		22-24 [0]		(Auto Feldweg)
+
+gefahren
+	PKW:	21,9-23,9[Q]	(PKW)
+
+
+
+
+
+[ 046 ]
+meta
+	id:		46
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	21,00
+	difficulty:	UNDEFINED
+
+gefahren
+	PKW:	14,3-18,5[15,5+17,5]	(PKW von rechts)
+
+
+
+
+
+[ 050 ]
+meta
+	id:		50
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	1:02,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	51,50
+
+blickanalyse
+	IS:		10-16
+	IS:		20-26
+	IS:		30-36
+	IS:		40-46
+	IS:		48-51,5	@S1
+	AR:		48-51,5	@S1
+	SR:		53,5-56,5	@S1
+	IS:		58-62	@S1
+
+
+
+
+

@@ -1,0 +1,67 @@
+﻿[ 237 ]
+meta
+	id:		237
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	26,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R:		3-6			(rechts in Straße)
+	R:		12-15			(Richtung geradeaus Roller)
+	IS:		13-17
+	R:		15-18			(Richtung rechts)
+	IS:		17-20
+
+gefahren
+	UNDEFINED:	8,2-16,9[13+15,9]	(roller)
+
+
+
+
+
+[ 238 ]
+meta
+	id:		238
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	28,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R:		10-16			(Richtung rechts Reihenfolge muss egal sein!!)
+	[<<] R:		10-16			(Richtung links Reihenfolge muss egal sein!!)
+	IS:		10-18
+	IS:		19-22
+
+gefahren
+	PKW:	9,9-13,5[11,5+13]	(Transporter)
+	UNDEFINED:	9,9-13,5[11,5+13]	(mini)
+
+
+
+
+
+[ 240 ]
+meta
+	id:		240
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	27,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	7,60
+
+blickanalyse
+	AL:		3,5-7,5	@A1
+	SL:		15-17,5	@A1
+	IS:		22-25	@A1
+
+gefahren
+	UNDEFINED:	8-15,6[12+13,5]	(roller)
+
+
+
+
+

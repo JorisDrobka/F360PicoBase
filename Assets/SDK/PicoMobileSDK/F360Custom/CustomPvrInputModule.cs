@@ -13,9 +13,13 @@ public class CustomPvrInputModule : Pvr_InputModule
         RightHand
     }
 
+    #pragma warning disable
+
     [SerializeField] private Pvr_UIPointer pointer_head;
     [SerializeField] private Pvr_UIPointer pointer_leftController;
     [SerializeField] private Pvr_UIPointer pointer_rightController;
+
+    #pragma warning restore
 
     protected override void Awake()
     {

@@ -1,0 +1,14 @@
+
+//	definiert Meta-Informationen zu den Lektionsgruppen
+//	(eine Gruppe ist die im Menü dargestellte Zusammenfassung mehrerer Lektionen)
+
+lecturegroup
+	id:				1
+	title:			testTitle 1
+	description:	testDescr 1
+	
+	
+lecturegroup
+	id:				2
+	title:			testTitle 2
+	description:	testDescr 2

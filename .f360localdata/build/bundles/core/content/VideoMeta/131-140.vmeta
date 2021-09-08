@@ -1,0 +1,110 @@
+﻿[ 131 ]
+meta
+	id:		131
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	23,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	IS:		4-6,5
+	B:		7-10 [1]		(Ball auf Straße)
+	IS:		9-12
+	IS:		13-15
+	R:		18,4-21		(rechts in Straße)
+
+gefahren
+	Kind:	9-10,5[Q]	(Kind)
+
+
+
+
+
+[ 134 ]
+meta
+	id:		134
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	B:		5-9 [0,5]		(Kinder)
+	IS:		9-11
+	AR:		11-17
+	SR:		17-23
+	IS:		22-26
+
+gefahren
+	Kind:	9,5-11,6[Q]	(Ball)
+
+
+
+
+
+[ 136 ]
+meta
+	id:		136
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	30,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	B-:		8-12 [1,5]		(Kinder)
+	IS:		12-16
+	IS:		21-26
+
+gefahren
+	Kind:	14,2-16,3[Q]	(Kind)
+
+
+
+
+
+[ 139 ]
+meta
+	id:		139
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	28,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R:		0-4,5			(rechts)
+	AL:		4-7	@V1
+	SL:		6-8	@V1
+	R:		12-13,5 [0,5]		(rechts)
+	B:		14-22 [0,5]		(Kinder)
+	IS:		22,3-28	@V1
+
+
+
+
+
+[ 140 ]
+meta
+	id:		140
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	15,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	IS:		1,5-4,5
+	B:		5-9[0,5]		(Kinder am Straßenrand)
+	IS:		9-11
+	B:		11-14	<Ampel>		(Rote/rot werdene Ampel links)
+
+gefahren
+	Kind:	8,4-9,8[Q]	(Kind)
+	UNDEFINED:	12-15[13,5+15]	(Ampel links)
+
+
+
+
+

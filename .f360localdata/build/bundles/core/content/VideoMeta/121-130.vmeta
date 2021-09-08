@@ -1,0 +1,118 @@
+﻿[ 124 ]
+meta
+	id:		124
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	12,00
+	difficulty:	UNDEFINED
+
+
+
+
+
+[ 125 ]
+meta
+	id:		125
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	13,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	R:		7-10			(RECHTS in Straße)
+
+
+
+
+
+[ 126 ]
+meta
+	id:		126
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	19,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	!IS
+	AL-:		2-8 [1]
+	SL:		08-10,5
+	IS:		15-18
+
+
+
+
+
+[ 127 ]
+meta
+	id:		127
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	29,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	AL:		4-6
+	B(hinten an der Busecke):	10-23	(Bus)
+	IS:		21,9-29
+
+
+
+
+
+[ 128 ]
+meta
+	id:		128
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	28,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	IS:		6-11			(anhalten)
+	E:		10-15			(Richtung rechts)
+	IS:		15-17,5		(losfahren)
+
+gefahren
+	PKW:	9-16[Q]	(silberner PKW rechts)
+
+
+
+
+
+[ 129 ]
+meta
+	id:		129
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	22,00
+	difficulty:	UNDEFINED
+
+
+
+
+
+[ 130 ]
+meta
+	id:		130
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	21,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	7,00
+	R:	17,00
+
+blickanalyse
+	!IS
+	AL:		2,5-6,5
+	AL:		6,5-9
+	SL:		9-13
+	IS:		14-20
+	AR:		14-20
+
+
+
+
+

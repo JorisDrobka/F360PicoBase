@@ -1,0 +1,187 @@
+﻿[ 151 ]
+meta
+	id:		151
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	17,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	9,50
+
+blickanalyse
+	AL:		1,5-5,5	@S1
+	SL:		10-13,5	@S1
+
+
+
+
+
+[ 152 ]
+meta
+	id:		152
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	20,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E:		8-10,5		(Straße rechts)
+	IS:		10,5-13
+	IS:		14-17
+
+gefahren
+	PKW:	8,3-11[9,3+11]	(blauer PKW)
+
+
+
+
+
+[ 153 ]
+meta
+	id:		153
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	21,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E:		8-11			(Richtung rechts)
+	IS:		10,5-13		(anhalten)
+	IS:		14-19		(losfahren)
+
+gefahren
+	Fahrrad:	8,3-13[11+13]	(Rad)
+
+
+
+
+
+[ 154 ]
+meta
+	id:		154
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	27,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	5,50
+
+blickanalyse
+	AL:		1,5-5,5	@A1
+	E:		10-13			(Richtung rechts)
+	IS:		13-15		(anhalten)
+	IS:		17,5-19,5		(losfahren)
+	SL:		18-22	@A1
+	IS:		24-26,5	@A1
+
+gefahren
+	UNDEFINED:	11-14,2[13+14,2]	(roller)
+
+
+
+
+
+[ 155 ]
+meta
+	id:		155
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	30,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	5,50
+
+blickanalyse
+	AL:		0-7	@A1
+	IS:		10-13
+	SL:		21-24	@A1
+	IS:		28-29,5	@A1
+
+
+
+
+
+[ 156 ]
+meta
+	id:		156
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	24,00
+	difficulty:	UNDEFINED
+
+intention
+	R:	4,50
+
+blickanalyse
+	AR:		0-4,5	@A1
+	V:		3-14			(Radfahrer)
+	SR:		14,5-18	@A1
+	IS:		21,5-24	@A1
+
+
+
+
+
+[ 157 ]
+meta
+	id:		157
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	29,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	4,00
+
+blickanalyse
+	AL:		0-4	@A1
+	R:		8-10			(Rechts in Straße)
+	IS:		10-13		(anhalten)
+	SL:		18,5-22,5	@A1
+	IS:		26,5-29	@A1
+
+gefahren
+	PKW:	8-11[9+10]	(blauer PKW)
+
+
+
+
+
+[ 158 ]
+meta
+	id:		158
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	18,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E:		11-14			(Richtung rechts)
+
+
+
+
+
+[ 159 ]
+meta
+	id:		159
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	25,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E:		10,5-14,5		(rechts in Straße)
+	IS:		14-16,5		(anhalten)
+	IS:		18,5-21		(losfahren)
+
+gefahren
+	Fahrrad:	12-17[16+17]	(Rad)
+
+
+
+
+

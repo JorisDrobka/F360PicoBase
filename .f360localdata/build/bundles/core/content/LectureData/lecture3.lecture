@@ -1,0 +1,21 @@
+
+lecture
+        group:      1
+        index:     	3
+        title:      Prüfungsfragen
+        difficulty: 1 
+
+
+
+sequence 1
+    meta
+        mode360:        Load
+
+    task
+
+    question
+        official:       xxx
+
+    video
+        id:             260
+        timing:         x-x

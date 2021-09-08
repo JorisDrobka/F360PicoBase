@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Pvr_ControllerPower : MonoBehaviour
 {
+    #pragma warning disable
+
     [SerializeField]
     private Sprite power1;
     [SerializeField]
@@ -27,6 +29,9 @@ public class Pvr_ControllerPower : MonoBehaviour
 
     private Image powerImage;
     private int powerValue;
+
+    #pragma warning restore
+    
     
     void Start()
     {

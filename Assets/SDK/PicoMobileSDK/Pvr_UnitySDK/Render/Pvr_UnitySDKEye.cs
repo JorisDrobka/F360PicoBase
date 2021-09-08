@@ -18,6 +18,8 @@ public class Pvr_UnitySDKEye : MonoBehaviour
     public static List<Pvr_UnitySDKEye> Instances = new List<Pvr_UnitySDKEye>();
 
     /************************************    Properties  *************************************/
+    #pragma warning disable
+ 
     #region Properties
     public Eye eyeSide;
 
@@ -53,6 +55,8 @@ public class Pvr_UnitySDKEye : MonoBehaviour
     private static float FoveationAreaValue;
     private static float FoveationMinimumValue;
     private int previousId = 0;
+
+    #pragma warning restore
 
 
     public Pvr_UnitySDKEyeManager Controller

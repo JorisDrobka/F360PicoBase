@@ -1,0 +1,91 @@
+﻿[ 173 ]
+meta
+	id:		173
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	42,00
+	difficulty:	UNDEFINED
+
+blickanalyse
+	E:		9-11			(Richtung rechts)
+	IS:		10-13		(anhalten)
+	IS:		16,5-19,5		(losfahren)
+
+gefahren
+	PKW:	6,9-12[8,5+10]	(blauer PKW)
+
+
+
+
+
+[ 175 ]
+meta
+	id:		175
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	10,00
+
+blickanalyse
+	IS:		6-10	@S1
+	AL:		6-10	@S1
+	SL:		16-20,5	@S1
+	IS:		24-26	@S1
+
+
+
+
+
+[ 176 ]
+meta
+	id:		176
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	25,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	5,00
+	R:	15,20
+
+blickanalyse
+	AL:		1-5	@U1
+	SL:		9-11	@U1
+	IS:		12,5-14,5	@U1
+	AR:		13,5-16	@U1
+	SR:		13,5-16	@U1
+	IS:		18,5-23	@U1
+
+
+
+
+
+[ 180 ]
+meta
+	id:		180
+	location:	UNDEFINED
+	lecture:	UNDEFINED
+	duration:	31,00
+	difficulty:	UNDEFINED
+
+intention
+	L:	8,00
+
+blickanalyse
+	AL:		4-8	@A1
+	R:		14,5-17,5		(Richtung rechts)
+	IS:		17-19
+	IS:		19,5-21,5
+	SL:		20-23,5	@A1
+	IS:		27,5-31	@A1
+
+gefahren
+	PKW:	13-18[15,5+17]	(blauer PKW)
+
+
+
+
+

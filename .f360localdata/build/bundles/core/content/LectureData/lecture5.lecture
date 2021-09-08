@@ -1,0 +1,150 @@
+lecture
+        group:      2
+        index:      2
+        title:      Einfahren
+        difficulty: 1 
+
+
+sequence 1
+    audio
+        name:       xxx
+
+
+
+sequence 2
+    meta
+        mode360:    Load
+    task
+        ba:         true
+        ba-guides:  true
+    question
+        ba:         true
+    video
+        id:         130
+
+
+
+sequence 3
+    gui
+        id:         result
+        auto:       true
+    audio
+        id:         xxx
+    audio
+        id:         xxx         //  multiple audio support + offset
+        offset:     1,0s
+
+
+sequence 4
+    meta:
+        mode360:    Load
+    task
+        ba:         true
+    video
+        id:         126
+
+
+
+sequence 5
+    meta:
+        mode360:    Load
+    task
+        ba:         true
+    video
+        id:         184
+
+
+
+sequence 6
+    audio
+        id:         xxx
+    audio
+        id:         xxx 
+        offset:     1,0s
+
+
+
+sequence 7
+    meta:
+        mode360:    Load
+    task
+        ge:         true
+    video
+        id:         134
+
+
+
+sequence 8
+    gui
+        id:         result
+        auto:       true
+    audio
+        id:         xxx
+
+
+
+sequence 9
+    meta:
+        mode360:    Load
+    task
+        ge:         true
+    video
+        id:         10
+
+
+
+sequence 10
+    meta:
+        mode360:    Load
+    task
+        ge:         true   
+    video
+        id:         95
+
+
+
+
+sequence 11
+    meta:
+        mode360:    Load
+    task
+        ba:         true
+        ba-guide:   true  
+    video
+        id:         265
+
+
+
+
+sequence 12
+    gui
+        id:         result
+        auto:       true
+    audio
+        id:         xxx
+    audio
+        id:         xxx
+        offset:     1,0s
+
+
+
+
+sequence 13
+    meta:
+        mode360:    Load
+    task
+        ba:         true
+    video
+        id:         265
+
+
+
+
+sequence 14
+    gui
+        id:         result
+    audio
+        id:         xxx
+
+
+
