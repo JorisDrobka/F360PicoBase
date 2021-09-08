@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace F360.Data.Runtime
+namespace F360.Data
 {
 
 

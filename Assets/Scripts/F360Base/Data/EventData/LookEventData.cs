@@ -11,7 +11,7 @@ using System.Linq;
 using UnityEngine;
 
 
-namespace F360.Data.Runtime
+namespace F360.Data
 {
 
 

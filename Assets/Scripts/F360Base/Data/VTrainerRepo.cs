@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-namespace F360.Data.Beta
+namespace F360.Data
 {
 
     /// @brief
@@ -47,7 +47,7 @@ namespace F360.Data.Beta
             }
         }
 
-        public void Add(params VTrainerData[] data)
+        public void Add(params VTrainerLecture[] data)
         {
             for(int i = 0; i < data.Length; i++)
             {
@@ -77,7 +77,7 @@ namespace F360.Data.Beta
             return null;
         }
 
-        public VTrainerData GetLecture(int index)
+        public VTrainerLecture GetLecture(int index)
         {
             foreach(var groupID in cache.Keys)
             {
@@ -108,7 +108,7 @@ namespace F360.Data.Beta
             }
             return null;
         }
-        public VTrainerData FindLecture(System.Func<VTrainerData, bool> predicate)
+        public VTrainerLecture FindLecture(System.Func<VTrainerLecture, bool> predicate)
         {
             foreach(var groupID in cache.Keys)
             {
@@ -120,7 +120,7 @@ namespace F360.Data.Beta
             return null;
         }
 
-        public IEnumerable<VTrainerData> QueryLectures(System.Func<VTrainerData, bool> predicate)
+        public IEnumerable<VTrainerLecture> QueryLectures(System.Func<VTrainerLecture, bool> predicate)
         {
             foreach(var groupID in cache.Keys)
             {
@@ -162,7 +162,7 @@ namespace F360.Data.Beta
             return false;
         }
 
-        bool addInternal(VTrainerData lecture)
+        bool addInternal(VTrainerLecture lecture)
         {
 //            Debug.Log(RichText.emph("VTrainerRepo:: add") + " [" + lecture.group + "/" + lecture.index + "]");
             if(lecture != null && lecture.isValid())

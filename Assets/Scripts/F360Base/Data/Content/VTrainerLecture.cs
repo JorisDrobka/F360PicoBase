@@ -5,7 +5,7 @@ using UnityEngine;
 using Utility.Config;
 
 
-namespace F360.Data.Beta
+namespace F360.Data
 {
 
     public class VTrainerGroupData
@@ -33,7 +33,7 @@ namespace F360.Data.Beta
     /// which are rated individually and as a group. Once the user has completed each assignment
     /// successfully, the next group is unlocked.
     ///
-    public class VTrainerData
+    public class VTrainerLecture
     {
         public int group;           ///< index of group
         public int index;           ///< index of task within lecture

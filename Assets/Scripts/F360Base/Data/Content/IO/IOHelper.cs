@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using F360.Data.Runtime;
-using F360.Data.Beta;
 using F360.Users.Stats;
 
 using Utility.Config;

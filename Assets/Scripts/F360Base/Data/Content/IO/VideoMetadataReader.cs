@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,8 +8,6 @@ using System.IO;
 using VRIntegration.Video;
 
 using F360.Users.Stats;
-using F360.Data.Runtime;
-using F360.Data.Beta;
 using Term = F360.Data.IO.Video.VideoMetaDataUtil.Term;
 
 

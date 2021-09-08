@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-namespace F360.Data.Beta
+namespace F360.Data
 {
 
 
@@ -16,7 +16,7 @@ namespace F360.Data.Beta
     public class VTrainerChapter
     {
 
-        public List<VTrainerData> lectures;
+        public List<VTrainerLecture> lectures;
 
         //  meta
         public readonly int lectureGroupID;
@@ -29,7 +29,7 @@ namespace F360.Data.Beta
             get { return lectures.Count; }
         }
 
-        public VTrainerData this[int index]
+        public VTrainerLecture this[int index]
         {
             get {
                 if(index >= 0 && index < lectures.Count) return lectures[index];
@@ -41,7 +41,7 @@ namespace F360.Data.Beta
         public VTrainerChapter(int groupID)
         {
             this.lectureGroupID = groupID;
-            lectures = new List<VTrainerData>();
+            lectures = new List<VTrainerLecture>();
         }
 
 

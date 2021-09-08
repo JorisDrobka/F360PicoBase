@@ -5,17 +5,11 @@ using UnityEngine;
 using System.IO;
 
 using VRIntegration.Video;
-
-using F360.Data.Runtime;
-using F360.Data.Beta;
 using F360.Users.Stats;
+
 
 namespace F360.Data.IO.Video
 {
-
-
-    
-    
 
 
     public delegate bool DataSetter(VideoMetaData target, object val);
