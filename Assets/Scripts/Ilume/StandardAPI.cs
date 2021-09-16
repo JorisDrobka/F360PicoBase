@@ -8,6 +8,7 @@ namespace F360
     *   Vordefiniertes Interface für externe Coder
     *
     */
+    
 
     public interface IStandardAPI
     {
