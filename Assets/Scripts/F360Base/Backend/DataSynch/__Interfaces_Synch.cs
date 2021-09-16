@@ -15,6 +15,23 @@ namespace F360.Backend.Synch
     //-----------------------------------------------------------------------------------------------------------------
 
 
+    /// @brief
+    /// Single database entry that can be synchronized with server.
+    ///
+    public interface ISynchronizedData
+    {
+        RESTMethod Method { get; }
+        SynchedURI Uri { get; }             ///< resource identifier
+
+        DateTime Timestamp { get; set; }    ///< last synch time
+ 
+        string Value { get; }               ///< currently held, string-formatted value
+        
+        bool ForceSinglePush();             //  needed for json
+
+        string Readable();
+    }
+
     public interface IDataSynchClient : IClient
     {
         void AddRepo(ISynchronizedRepo repo);
@@ -41,22 +58,7 @@ namespace F360.Backend.Synch
         
     }
     
-    /// @brief
-    /// Single database entry that can be synchronized with server.
-    ///
-    public interface ISynchronizedData
-    {
-        RESTMethod Method { get; }
-        SynchedURI Uri { get; }             ///< resource identifier
-
-        DateTime Timestamp { get; set; }    ///< last synch time
- 
-        string Value { get; }               ///< currently held, string-formatted value
-        
-        bool ForceSinglePush();             //  needed for json
-
-        string Readable();
-    }
+    
 
     /*public interface ISynchronizedDataCollection
     {
