@@ -29,6 +29,13 @@ namespace F360.Data
         public string descriptor;                   ///< readable name/type of hazard
 
 
+        public HazardEventType type
+        {
+            get {
+                return isQuickEvent ? HazardEventType.Quick : HazardEventType.Anticipated;
+            }
+        }
+
         public static Event Create(int index)
         {   
             var e = new Event();

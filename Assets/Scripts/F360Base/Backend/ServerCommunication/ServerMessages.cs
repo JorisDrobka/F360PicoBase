@@ -56,13 +56,13 @@ namespace F360.Backend.Messages
                                             ///  if this is set, no other values are formatted with the response. 
 
         [DataMember]
-        public bool registered;             ///< [optional] flag set on initial registration
+        public bool registered;             ///< [optional] flag set on initial registration                        [OBSOLETE]
         [DataMember]
-        public string set_license;          ///< [optional] server sets new license key & hash
+        public string set_license;          ///< [optional] server sets new license key & hash                      [OBSOLETE]
         [DataMember]
         public DateTime expire_date;        ///< [optional] send together with set_license
         [DataMember]
-        public bool license_expired;        ///< [optional] flag set when license is expired
+        public bool license_expired;        ///< [optional] flag set when license is expired                    
         [DataMember]
         public bool patchable;              ///< [optional] flag set when server confirmed patchlevel update
 
@@ -226,6 +226,183 @@ namespace F360.Backend.Messages
     }
 
 
+
+
+    //-----------------------------------------------------------------------------------------------
+    //
+    //      STUDENT PROFILES
+    //
+    //-----------------------------------------------------------------------------------------------
+
+    public enum StudentProfileState
+    {
+        DoesNotExist=0,
+        Exists,
+
+        Created,
+        Updated
+    }
+
+    [DataContract]
+    public class StudentProfileInfo
+    {
+        [DataMember]
+        public int userID;
+
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public string mail;     // optional? 
+    }
+
+
+
+    [DataContract]
+    public class CS_CreateStudentProfile
+    {
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public string mail;     ///< optional? safe?
+    }
+
+    [DataContract]
+    public class CS_UpdateStudentProfile
+    {
+        [DataMember]
+        public int userID;
+
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public string mail;
+    }
+
+    [DataContract]
+    public class CS_RequestStudentProfileInfo
+    {
+        [DataMember]
+        public int userID;
+    }
+
+    [DataContract]
+    public class SC_StudentInfoResponse
+    {
+        [DataMember]
+        public int state;
+
+        [DataMember]
+        public int userID;
+
+        [DataMember]
+        public string name;
+
+        [DataMember]
+        public string mail;
+
+
+        public StudentProfileInfo GetInfo()
+        {
+            return new StudentProfileInfo() {
+                userID=userID,
+                name=name,
+                mail=mail
+            };
+        }
+    }
+
+    //-----------------------------------------------------------------------------------------------
+
+    [DataContract]
+    public class CS_ListStudentProfiles
+    {
+        [DataMember]
+        public bool archived;
+    }
+
+    [DataContract]
+    public class SC_ListStudentProfilesResponse
+    {
+        [DataMember]
+        public StudentProfileInfo[] profiles;
+    }
+
+    //-----------------------------------------------------------------------------------------------
+    //
+    //      STAT SYNCHING
+    //
+    //-----------------------------------------------------------------------------------------------
+
+    //  push data
+    
+    [DataContract]
+    public class CS_PushUserData
+    {
+        [DataMember]
+        public int userID;
+
+        [DataMember]
+        public string[] uris;        
+
+        [DataMember]
+        public string[] payload;   
+
+        [DataMember]
+        public DateTime[] timestamps;
+
+        public bool isValid()
+        {
+            return uris != null && payload != null && timestamps != null 
+                && uris.Length == payload.Length 
+                && timestamps.Length == payload.Length;
+        }
+    }
+
+    [DataContract]
+    public class SC_PushUserDataResponse
+    {
+        [DataMember]
+        public int userID;
+
+        [DataMember]
+        public int uploaded;
+    }
+
+
+    //-----------------------------------------------------------------------------------------------
+    
+    //  pull data
+
+    [DataContract]
+    public class CS_PullUserData
+    {
+        [DataMember]
+        public int userID;
+
+        [DataMember]
+        public DateTime lastSynchTime;
+    }
+
+    [DataContract]
+    public class SC_PullUserDataResponse
+    {
+        [DataMember]
+        public int userID;
+
+        [DataMember]
+        public string[] uris;
+
+        [DataMember]
+        public string[] payload;
+
+        public bool isValid()
+        {
+            return uris != null && payload != null && uris.Length == payload.Length;
+        }
+    }
 
 
 

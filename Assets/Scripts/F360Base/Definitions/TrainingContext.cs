@@ -11,14 +11,21 @@ namespace F360
     public enum TrainingContext
     {
         None,
-        Exam,
         Custom,
         FromSelection,
-        VRTrainer,              //  longer training videos
-        Hazards,               //  
 
-        AwarenessTrainer,       //  shows awareness guides
+
+        //  MODES
+
+        VRTrainer,             
         DriveVR,
+        Exam,
+
+
+        //  OBSOLETE CONTEXTS
+
+        Hazards,
+        AwarenessTrainer,       //  shows awareness guides
 
         TEACHER                 //  ----> TODO: this needs to go!!!!!!!
 

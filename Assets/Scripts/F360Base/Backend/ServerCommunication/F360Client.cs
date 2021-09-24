@@ -33,7 +33,7 @@ namespace F360.Backend
 
         //  function uris
         const string APP_URI = "/api/";
-     //   const string URI_REGISTER = APP_URI + "register/";
+        const string URI_REGISTER = APP_URI + "register/";              ///< input: id output:    
         const string URI_STATUS = APP_URI + "status/";
         const string URI_PATCH_MANIFEST = APP_URI + "patch-m/";
         const string URI_PATCH = APP_URI + "patch-p/";

@@ -28,22 +28,22 @@ namespace F360.Data
 
         Dictionary<int, VTrainerChapter> cache;
 
-        Dictionary<int, VTrainerGroupData> groups;
+        Dictionary<int, VTrainerChapterData> chapterData;
 
         private VTrainerRepo()
         {
             cache = new Dictionary<int, VTrainerChapter>();
-            groups = new Dictionary<int, VTrainerGroupData>();
+            chapterData = new Dictionary<int, VTrainerChapterData>();
         }
 
 
         //-----------------------------------------------------------------------------------------------------------------
 
-        public void AddGroup(params VTrainerGroupData[] data)
+        public void AddGroup(params VTrainerChapterData[] data)
         {
             for(int i = 0; i < data.Length; i++)
             {
-                addGroupInternal(data[i]);
+                addChapterInternal(data[i]);
             }
         }
 
@@ -51,7 +51,7 @@ namespace F360.Data
         {
             for(int i = 0; i < data.Length; i++)
             {
-                addInternal(data[i]);
+                addLectureInternal(data[i]);
             }
         }
 
@@ -59,7 +59,7 @@ namespace F360.Data
         //-----------------------------------------------------------------------------------------------------------------
 
 
-        public int GroupCount
+        public int ChapterCount
         {
             get { return cache.Count; }
         }
@@ -70,25 +70,25 @@ namespace F360.Data
         }
 
 
-        public VTrainerChapter Get(int groupID)
+        public VTrainerChapter Get(int chapterID)
         {
             //Debug.Log("VTrainerRepo::Get(" + groupID + ") ? " + cache.ContainsKey(groupID));
-            if(cache.ContainsKey(groupID)) return cache[groupID];
+            if(cache.ContainsKey(chapterID)) return cache[chapterID];
             return null;
         }
 
-        public VTrainerLecture GetLecture(int index)
+        public VTrainerLecture GetLecture(int lectureID)
         {
-            foreach(var groupID in cache.Keys)
+            foreach(var chapterID in cache.Keys)
             {
-                for(int i = 0; i < cache[groupID].Count; i++)
+                for(int i = 0; i < cache[chapterID].Count; i++)
                 {
-                    var id = cache[groupID].lectures[i].index;
-                    if(id == index)
+                    var id = cache[chapterID].lectures[i].index;
+                    if(id == lectureID)
                     {
-                        return cache[groupID].lectures[i];
+                        return cache[chapterID].lectures[i];
                     }
-                    else if(id > index)
+                    else if(id > lectureID)
                     {
                         return null;
                     }
@@ -99,20 +99,20 @@ namespace F360.Data
 
         public VTrainerChapter Find(System.Func<VTrainerChapter, bool> predicate)
         {
-            foreach(var groupID in cache.Keys)
+            foreach(var chapterID in cache.Keys)
             {
-                if(predicate(cache[groupID]))
+                if(predicate(cache[chapterID]))
                 {
-                    return cache[groupID];
+                    return cache[chapterID];
                 }
             }
             return null;
         }
         public VTrainerLecture FindLecture(System.Func<VTrainerLecture, bool> predicate)
         {
-            foreach(var groupID in cache.Keys)
+            foreach(var chapterID in cache.Keys)
             {
-                foreach(var lecture in cache[groupID].lectures)
+                foreach(var lecture in cache[chapterID].lectures)
                 {
                     if(predicate(lecture)) return lecture;
                 }
@@ -122,9 +122,9 @@ namespace F360.Data
 
         public IEnumerable<VTrainerLecture> QueryLectures(System.Func<VTrainerLecture, bool> predicate)
         {
-            foreach(var groupID in cache.Keys)
+            foreach(var chapterID in cache.Keys)
             {
-                foreach(var lecture in cache[groupID].lectures)
+                foreach(var lecture in cache[chapterID].lectures)
                 {
                     if(predicate(lecture)) yield return lecture;
                 }
@@ -137,19 +137,19 @@ namespace F360.Data
 
         //  internal
 
-        bool addGroupInternal(VTrainerGroupData group)
+        bool addChapterInternal(VTrainerChapterData chapter)
         {
-            if(group != null && group.isValid())
+            if(chapter != null && chapter.isValid())
             {
-                if(!groups.ContainsKey(group.index))
+                if(!chapterData.ContainsKey(chapter.index))
                 {
                     //Debug.Log("VTrainerRepo:: " + RichText.darkGreen("added lecture group[" + group.index.ToString() + "] data!"));
-                    groups.Add(group.index, group);
+                    chapterData.Add(chapter.index, chapter);
                     foreach(var lec in cache.Values)
                     {
-                        if(lec.lectureGroupID == group.index)
+                        if(lec.lectureGroupID == chapter.index)
                         {
-                            lec.SetGroupInfo(group);
+                            lec.SetGroupInfo(chapter);
                         }
                     }
                     return true;
@@ -157,12 +157,12 @@ namespace F360.Data
             }
             else
             {
-                Debug.LogWarning("VTrainerRepo:: error adding lecturegroup.\nreason: " + (group == null ? "is null" : (" data invalid!\n" + group.Readable(true))));
+                Debug.LogWarning("VTrainerRepo:: error adding lecturegroup.\nreason: " + (chapter == null ? "is null" : (" data invalid!\n" + chapter.Readable(true))));
             }
             return false;
         }
 
-        bool addInternal(VTrainerLecture lecture)
+        bool addLectureInternal(VTrainerLecture lecture)
         {
 //            Debug.Log(RichText.emph("VTrainerRepo:: add") + " [" + lecture.group + "/" + lecture.index + "]");
             if(lecture != null && lecture.isValid())
@@ -171,9 +171,9 @@ namespace F360.Data
                 {
                     var lec = new VTrainerChapter(lecture.group);
                     cache.Add(lecture.group, lec);
-                    if(groups.ContainsKey(lecture.group))
+                    if(chapterData.ContainsKey(lecture.group))
                     {
-                        lec.SetGroupInfo(groups[lecture.group]);
+                        lec.SetGroupInfo(chapterData[lecture.group]);
                     }
                 }
                 if(!cache[lecture.group].lectures.Contains(lecture))

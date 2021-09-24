@@ -38,17 +38,7 @@ namespace F360
         
         public static bool isFolder(string path)
         {
-            return FileSystemUtil.isFolder(path);
-            /*if(path.EndsWith("/"))
-            {
-                return true;
-            }
-            else
-            {
-                int s_id = path.LastIndexOf('/');
-                int p_id = path.LastIndexOf('.');
-                return s_id != -1 && (p_id == -1 || p_id < s_id);
-            }*/            
+            return FileSystemUtil.isFolder(path);           
         }
 
         /// @returns wether path is a Unity resource folderpath
@@ -74,170 +64,29 @@ namespace F360
         public static string RemoveFolderFromFilePath(string filepath)
         {
             return FileSystemUtil.RemoveFolderFromFilePath(filepath);
-            /*int s_id = filepath.LastIndexOf('/');
-            if(s_id != -1 && s_id < filepath.Length-1)
-            {
-                s_id++;
-                return filepath.Substring(s_id, filepath.Length-s_id);
-            }
-            return filepath;*/
         }
 
         public static string GetFileExtension(string file)
         {
             return FileSystemUtil.GetFileExtension(file, allowed_extensions);
-            /*int s_id = file.LastIndexOf('/');
-            int p_id = file.LastIndexOf('.');
-            if(s_id != -1 || p_id > s_id)
-            {
-                string ext = file.Substring(p_id, file.Length-p_id);
-                for(int i = 0; i < allowed_extensions.Length; i++)
-                {
-                    if(ext.StartsWith(allowed_extensions[i]))
-                    {
-                        return allowed_extensions[i];
-                    }
-                }
-            }
-            return "";*/
         }
 
         public static string RemoveFileExtension(string file)
         {
             return FileSystemUtil.RemoveFileExtension(file);
-            /*int s_id = file.LastIndexOf('/');
-            int p_id = file.LastIndexOf('.');
-            if(s_id != -1 || p_id > s_id)
-            {
-                string ext = file.Substring(p_id, file.Length-p_id);
-                if(allowed_extensions.Contains(ext))
-                {
-                    return file.Substring(0, p_id);
-                }
-            }
-            return file;*/
         }
 
         public static string RemoveFileFromPath(string path)
         {
             return FileSystemUtil.RemoveFileFromPath(path);
-//            Debug.Log("Remove File From path[" + path + "]\nnot folder: " + (!isFolder(path)));
-            /*if(!isFolder(path))
-            {
-                int lid = path.LastIndexOf('/');
-                if(lid != -1)
-                {
-                    path = path.Substring(0, lid+1);
-                }
-            }
-            if(!path.EndsWith("/")) path += "/";
-            return path;*/
         }
 
 
 
         //-----------------------------------------------------------------------------------------------
         //
-        //  FILE NAME ENCODING
+        //  PARSING
         //
-        //-----------------------------------------------------------------------------------------------
-
-        public static bool GetVariant(string filename, out string variant)
-        {
-            if(!isFolder(filename))
-            {
-                string c, v, e;
-                unpack_filename(filename, out c, out variant, out v, out e);
-                return !string.IsNullOrEmpty(variant);
-            }
-            variant = "";
-            return false;
-        }
-
-        public static bool GetVersion(string filename, out string version)
-        {
-            if(!isFolder(filename))
-            {
-                string c, va, e;
-                unpack_filename(filename, out c, out va, out version, out e);
-                return !string.IsNullOrEmpty(version);
-            }
-            version = "";
-            return false;
-        }
-
-        public static string FormatName(string filename, bool keepVariant=true, bool keepVersion=false, bool keepExtension=false)
-        {
-            if(string.IsNullOrEmpty(filename))
-            {
-                return "";
-            }
-            else if(isFolder(filename))
-            {
-                return filename;
-            }
-            filename = RemoveFolderFromFilePath(filename);
-            string c, va, v, e;
-            unpack_filename(filename, out c, out va, out v, out e);
-            string result = c;
-            if(keepVariant && !string.IsNullOrEmpty(va))
-            {
-                result += FILENAME_VARIANT_QUALIFIER + va;
-            }
-            if(keepVersion && !string.IsNullOrEmpty(v))
-            {
-                result += FILENNAME_VERSION_QUALIFIER + v;
-            }
-            if(keepExtension && !string.IsNullOrEmpty(e))
-            {
-                result += e;
-            }
-            return result;
-        }
-        
-
-        static void unpack_filename(string filename, out string clean, out string variant, out string version, out string extension)
-        {
-            filename = RemoveFolderFromFilePath(filename);
-            clean = filename;
-            variant = "";
-            version = "";
-            extension = "";
-            
-            int e = clean.LastIndexOf(".");
-            if(e != -1)
-            {
-                extension = clean.Substring(e, clean.Length-e);
-                if(allowed_extensions.Contains(extension))
-                {
-                    clean = filename.Substring(0, e);
-                }
-                else
-                {
-                    extension = "";
-                    e = -1;
-                }
-            }
-
-            int v = clean.LastIndexOf(FILENNAME_VERSION_QUALIFIER);
-
-            if(v != -1)
-            {
-                v++;
-                version = clean.Substring(v, clean.Length-v);
-                clean = clean.Substring(0, v-1);
-            }
-
-            int va = clean.LastIndexOf(FILENAME_VARIANT_QUALIFIER);
-            if(va != -1)
-            {
-                va++;
-                variant = clean.Substring(va, clean.Length-va);
-                clean = clean.Substring(0, va-1);
-            }
-        }
-
-
         //-----------------------------------------------------------------------------------------------
 
         public static bool ParseVersion(string file, out string version)
@@ -546,170 +395,6 @@ namespace F360
 
         
 
-
-        //-----------------------------------------------------------------------------------------------
-        //
-        //  VALUE READING
-        //
-        //-----------------------------------------------------------------------------------------------
-
-    
-
-        /// @brief
-        /// parsed human-entered second timing data in the format of 0,5 (=500 milliseconds) or 2,24 (=2 seconds, 240 milliseconds)
-        /// for minutes, use ':', for example 5:02,24 or 05:02,24
-        ///
-        /// @returns parse success & time in milliseconds
-        ///
-        public static bool ParseTimeFromSecondsDataset(string term, out int result, char trim=CSV_TRIM)
-        {
-            term = RemoveSuffixFromTimeString(term);
-
-            result = -1;
-            string[] split = term.Split(',');
-            string firstTerm = split[0].Trim();
-            if(firstTerm.StartsWith("0")) firstTerm.Remove(0, 1);
-
-            int minutes = 0;
-            int mId = firstTerm.IndexOf(":");
-            if(mId != -1)
-            {
-                //  parse minutes
-                var split2 = firstTerm.Split(':');
-                int m;
-                if(ParseIntegerFromDataset(split2[0], out m, trim))
-                {
-                    minutes = m;
-                }
-                firstTerm = split2[1];
-                if(firstTerm.StartsWith("0")) firstTerm.Remove(0, 1);
-            }
-
-            int seconds;
-            if(ParseIntegerFromDataset(firstTerm, out seconds, trim))
-            {
-                if(split.Length > 1)
-                {
-                    split[1] = split[1].Trim();
-                    int milliseconds = 0;
-                    int leadingZeros = 0;
-                    for(int i = 0; i < split[1].Length; i++)
-                    {
-                        if(split[1][i] == '0') leadingZeros++;
-                        else break;
-                    }
-                    split[1] = split[1].TrimEnd('0');
-                    if(split[1].Length == 0)
-                    {
-                        //  0 millis
-                    }
-                    else if(!ParseIntegerFromDataset(split[1], out milliseconds, trim))
-                    {
-                        return false;
-                    }
-
-          //          var b = new System.Text.StringBuilder("parse millis... <" + term + "> seconds=[" + seconds.ToString() + "] millis=[" + milliseconds.ToString() + "] lead zeros=[" + leadingZeros.ToString() + "]");
-
-                    if(leadingZeros > 0)
-                    {
-                        
-                    }
-                    else
-                    {
-                        if(milliseconds > 999)
-                        {
-                            milliseconds = Mathf.RoundToInt(milliseconds / 1000f);
-          //                  b.Append("\nooompf! >> " + milliseconds);
-                        }
-                        else if(milliseconds < 10)
-                        {
-                            milliseconds *= 100;
-                        }
-                        else if(milliseconds < 100)
-                        {
-                            milliseconds *= 10;
-                        }
-                    }
-                    seconds += minutes * 60;
-                    result = (seconds * 1000) + milliseconds;
-                    return true;
-                }
-                else
-                {
-                    seconds += minutes * 60;
-                    result = seconds * 1000;
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        /// @brief
-        /// parses a human-entered timerange in seconds
-        ///
-        /// @returns parse success & timerange in milliseconds
-        ///
-        public static bool ParseTimeRangeFromSecondsDataset(string term, out RangeInt range, char trim=CSV_TRIM)
-        {
-            term = RemoveSuffixFromTimeString(term);
-
-            int min, max;
-            string[] split = term.Split('-');
-            if(split.Length == 2)
-            {
-                if(ParseTimeFromSecondsDataset(split[0], out min, trim) && ParseTimeFromSecondsDataset(split[1], out max, trim))
-                {
-                    range = new RangeInt(min, max-min);
-                    return true;
-                }
-            }
-            else if(ParseTimeFromSecondsDataset(term, out min, trim))
-            {
-                range = new RangeInt(min, 0);
-                return true;
-            }
-            range = new RangeInt();
-            return false;
-        }
-
-
-        public static bool ParseIntegerFromDataset(string term, out int num, char trim=CSV_TRIM)
-        {
-            term = term.Trim(trim);
-            if(System.Int32.TryParse(term, out num))
-            {
-                return true;
-            }
-            num = -1;
-            return false;
-        }
-
-
-
-        public static bool ParseFloatingPointMillisFromDataset(string term, out float num, char trim=CSV_TRIM)
-        {
-            int zeros = 0;
-            for(int i = 0; i < term.Length; i++)
-            {
-                if(term[i] == '0') zeros++;
-                else break;
-            }
-            int len = term.Length - zeros;
-            int n;
-            if(len > 0 && System.Int32.TryParse(term, out n))
-            {
-                if(n > 0)
-                {
-                    num = n / len;
-                    return true;
-                }
-            }
-            num = -1f;
-            return false;
-        }
-
-
-
         //-----------------------------------------------------------------------------------------------
         //
         //  TIME FORMATTING
@@ -891,17 +576,6 @@ namespace F360
         public static bool TryFormatString(ref string term, string removeTerm)
         {
             return FileSystemUtil.TryFormatTerm(ref term, removeTerm);
-            /*int index = term.IndexOf(removeTerm);
-            if(index != -1)
-            {
-                int len = removeTerm.Length;
-                string ls = term.Substring(0, index);
-                string rs = term.Substring(index+len, term.Length-(index+len));                
-                Debug.Log("LS: < " + RichText.darkGreen(ls) + " >  RS: < " + RichText.darkGreen(rs) + " >\nterm:: " + term);
-                term = ls.Trim() + rs.Trim();
-                return true;
-            }
-            return false;*/
         }
 
         public static bool TryFormatString( ref string term, 
@@ -911,28 +585,6 @@ namespace F360
                                             bool addTokensToInnerTerm=true)
         {
             return FileSystemUtil.TryFormatTerm(ref term, beginToken, endToken, out inner, removeFromTerm, addTokensToInnerTerm);
-            /*int left = term.IndexOf(beginToken);
-            int right = term.IndexOf(endToken);
-            if(left != -1 && right != -1 && left < right)
-            {
-                inner = term.Substring(left+1, right-left-1).Trim();
-                if(addTokensToInnerTerm)
-                {
-                    inner = beginToken.ToString() + inner + endToken.ToString();
-                }
-                if(!string.IsNullOrEmpty(inner))
-                {  
-                    if(removeFromTerm)
-                    {
-                        string ls = term.Substring(0, left);
-                        string rs = term.Substring(right+1, term.Length-right-1);
-                        term = ls.Trim() + rs.Trim();
-                    } 
-                    return true;
-                }
-            }
-            inner = "";
-            return false;*/
         }
 
         public static bool TryFormatString( ref string term, 
@@ -942,100 +594,282 @@ namespace F360
                                             bool addTokensToInnerTerm=true)
         {
             return FileSystemUtil.TryFormatTerm(ref term, beginToken, endToken, out inner, removeFromTerm, addTokensToInnerTerm);
-            /*int left = term.IndexOf(beginToken);
-            int right = term.IndexOf(endToken);
-            if(left != -1 && right != -1 && left < right)
-            {
-                int lLen = beginToken.Length;
-                int rLen = endToken.Length;
-
-                inner = term.Substring(left+lLen+1, right-(left+lLen)-1).Trim();
-                if(addTokensToInnerTerm)
-                {
-                    inner = beginToken.ToString() + inner + endToken.ToString();
-                }
-                if(!string.IsNullOrEmpty(inner))
-                {  
-                    if(removeFromTerm)
-                    {
-                        string ls = term.Substring(0, left);
-                        string rs = term.Substring(right+rLen, term.Length-(right+rLen));
-                        term = ls.Trim() + rs.Trim();
-                    } 
-                    return true;
-                }
-            }
-            inner = "";
-            return false;*/
         }
 
 
-
-
-
         //-----------------------------------------------------------------------------------------------
         //
-        //  CUSTOM PARSING
+        //  VALUE READING
         //
         //-----------------------------------------------------------------------------------------------
 
-        /*static bool parseNumberAfterQualifier(string name, string qualifier, out int num, params char[] stopTokens)
+
+        //  methods for quickly reading F360 datafiles
+    
+
+        /// @brief
+        /// parsed human-entered second timing data in the format of 0,5 (=500 milliseconds) or 2,24 (=2 seconds, 240 milliseconds)
+        /// for minutes, use ':', for example 5:02,24 or 05:02,24
+        ///
+        /// @returns parse success & time in milliseconds
+        ///
+        public static bool ParseTimeFromSecondsDataset(string term, out int result, char trim=CSV_TRIM)
         {
-            name = RemoveFolderFromFilePath(name);
-            name = RemoveFileExtension(name);
+            term = RemoveSuffixFromTimeString(term);
 
-            int lID = name.IndexOf(qualifier);
-            if(lID != -1)
+            result = -1;
+            string[] split = term.Split(',');
+            string firstTerm = split[0].Trim();
+            if(firstTerm.StartsWith("0")) firstTerm.Remove(0, 1);
+
+            int minutes = 0;
+            int mId = firstTerm.IndexOf(":");
+            if(mId != -1)
             {
-                string term = name.Substring(lID+qualifier.Length, name.Length-lID-qualifier.Length);
-                string parseString = null;
-                int startIndex = -1;
-                for(int i = 0; i < term.Length; i++)
+                //  parse minutes
+                var split2 = firstTerm.Split(':');
+                int m;
+                if(ParseIntegerFromDataset(split2[0], out m, trim))
                 {
-                    if(System.Char.IsDigit(term[i]))
+                    minutes = m;
+                }
+                firstTerm = split2[1];
+                if(firstTerm.StartsWith("0")) firstTerm.Remove(0, 1);
+            }
+
+            int seconds;
+            if(ParseIntegerFromDataset(firstTerm, out seconds, trim))
+            {
+                if(split.Length > 1)
+                {
+                    split[1] = split[1].Trim();
+                    int milliseconds = 0;
+                    int leadingZeros = 0;
+                    for(int i = 0; i < split[1].Length; i++)
                     {
-                        if(startIndex == -1)
-                        {
-                            startIndex = i;
-                        }
+                        if(split[1][i] == '0') leadingZeros++;
+                        else break;
                     }
-                    else if(stopTokens.Length > 0 && System.Array.Exists(stopTokens, x=> x == term[i]))
+                    split[1] = split[1].TrimEnd('0');
+                    if(split[1].Length == 0)
                     {
-                        //  stop at version/variant separator
-                        break;
+                        //  0 millis
+                    }
+                    else if(!ParseIntegerFromDataset(split[1], out milliseconds, trim))
+                    {
+                        return false;
+                    }
+
+          //          var b = new System.Text.StringBuilder("parse millis... <" + term + "> seconds=[" + seconds.ToString() + "] millis=[" + milliseconds.ToString() + "] lead zeros=[" + leadingZeros.ToString() + "]");
+
+                    if(leadingZeros > 0)
+                    {
+                        
                     }
                     else
                     {
-                        if(startIndex != -1)
+                        if(milliseconds > 999)
                         {
-                            parseString = term.Substring(startIndex, i-startIndex-1);
-                            break;
+                            milliseconds = Mathf.RoundToInt(milliseconds / 1000f);
+          //                  b.Append("\nooompf! >> " + milliseconds);
+                        }
+                        else if(milliseconds < 10)
+                        {
+                            milliseconds *= 100;
+                        }
+                        else if(milliseconds < 100)
+                        {
+                            milliseconds *= 10;
                         }
                     }
+                    seconds += minutes * 60;
+                    result = (seconds * 1000) + milliseconds;
+                    return true;
                 }
+                else
+                {
+                    seconds += minutes * 60;
+                    result = seconds * 1000;
+                    return true;
+                }
+            }
+            return false;
+        }
 
-                 if(!string.IsNullOrEmpty(parseString))
-                 {
-                     parseString = RemoveLeadingZeroes(parseString);
-                     return System.Int32.TryParse(parseString, out num); 
-                 }
+        /// @brief
+        /// parses a human-entered timerange in seconds
+        ///
+        /// @returns parse success & timerange in milliseconds
+        ///
+        public static bool ParseTimeRangeFromSecondsDataset(string term, out RangeInt range, char trim=CSV_TRIM)
+        {
+            term = RemoveSuffixFromTimeString(term);
+
+            int min, max;
+            string[] split = term.Split('-');
+            if(split.Length == 2)
+            {
+                if(ParseTimeFromSecondsDataset(split[0], out min, trim) && ParseTimeFromSecondsDataset(split[1], out max, trim))
+                {
+                    range = new RangeInt(min, max-min);
+                    return true;
+                }
+            }
+            else if(ParseTimeFromSecondsDataset(term, out min, trim))
+            {
+                range = new RangeInt(min, 0);
+                return true;
+            }
+            range = new RangeInt();
+            return false;
+        }
+
+
+        public static bool ParseIntegerFromDataset(string term, out int num, char trim=CSV_TRIM)
+        {
+            term = term.Trim(trim);
+            if(System.Int32.TryParse(term, out num))
+            {
+                return true;
             }
             num = -1;
             return false;
         }
 
-        static string RemoveLeadingZeroes(string term)
+
+
+        public static bool ParseFloatingPointMillisFromDataset(string term, out float num, char trim=CSV_TRIM)
         {
-            if(term.StartsWith("00"))
+            int zeros = 0;
+            for(int i = 0; i < term.Length; i++)
             {
-                term = term.Substring(2);
+                if(term[i] == '0') zeros++;
+                else break;
             }
-            else if(term.StartsWith("0"))
+            int len = term.Length - zeros;
+            int n;
+            if(len > 0 && System.Int32.TryParse(term, out n))
             {
-                term = term.Substring(1);
+                if(n > 0)
+                {
+                    num = n / len;
+                    return true;
+                }
             }
-            return term; 
-        }*/
+            num = -1f;
+            return false;
+        }
+
+
+        //-----------------------------------------------------------------------------------------------
+        //
+        //  FILE NAME ENCODING
+        //
+        //-----------------------------------------------------------------------------------------------
+
+
+        //  standard-encoding of filenames:
+        //
+        //  name-variant.ext
+        //  example: config-1.2.json
+
+
+
+        public static bool GetVariant(string filename, out string variant)
+        {
+            if(!isFolder(filename))
+            {
+                string c, v, e;
+                unpack_filename(filename, out c, out variant, out v, out e);
+                return !string.IsNullOrEmpty(variant);
+            }
+            variant = "";
+            return false;
+        }
+
+        public static bool GetVersion(string filename, out string version)
+        {
+            if(!isFolder(filename))
+            {
+                string c, va, e;
+                unpack_filename(filename, out c, out va, out version, out e);
+                return !string.IsNullOrEmpty(version);
+            }
+            version = "";
+            return false;
+        }
+
+        public static string FormatName(string filename, bool keepVariant=true, bool keepVersion=false, bool keepExtension=false)
+        {
+            if(string.IsNullOrEmpty(filename))
+            {
+                return "";
+            }
+            else if(isFolder(filename))
+            {
+                return filename;
+            }
+            filename = RemoveFolderFromFilePath(filename);
+            string c, va, v, e;
+            unpack_filename(filename, out c, out va, out v, out e);
+            string result = c;
+            if(keepVariant && !string.IsNullOrEmpty(va))
+            {
+                result += FILENAME_VARIANT_QUALIFIER + va;
+            }
+            if(keepVersion && !string.IsNullOrEmpty(v))
+            {
+                result += FILENNAME_VERSION_QUALIFIER + v;
+            }
+            if(keepExtension && !string.IsNullOrEmpty(e))
+            {
+                result += e;
+            }
+            return result;
+        }
+        
+
+        static void unpack_filename(string filename, out string clean, out string variant, out string version, out string extension)
+        {
+            filename = RemoveFolderFromFilePath(filename);
+            clean = filename;
+            variant = "";
+            version = "";
+            extension = "";
+            
+            int e = clean.LastIndexOf(".");
+            if(e != -1)
+            {
+                extension = clean.Substring(e, clean.Length-e);
+                if(allowed_extensions.Contains(extension))
+                {
+                    clean = filename.Substring(0, e);
+                }
+                else
+                {
+                    extension = "";
+                    e = -1;
+                }
+            }
+
+            int v = clean.LastIndexOf(FILENNAME_VERSION_QUALIFIER);
+
+            if(v != -1)
+            {
+                v++;
+                version = clean.Substring(v, clean.Length-v);
+                clean = clean.Substring(0, v-1);
+            }
+
+            int va = clean.LastIndexOf(FILENAME_VARIANT_QUALIFIER);
+            if(va != -1)
+            {
+                va++;
+                variant = clean.Substring(va, clean.Length-va);
+                clean = clean.Substring(0, va-1);
+            }
+        }
+
     }
 
 

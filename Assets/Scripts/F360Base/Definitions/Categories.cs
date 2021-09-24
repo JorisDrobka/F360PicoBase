@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
-using System.IO;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-//using DeviceBridge.Files;
 
 namespace F360
 {
 
 
-
+    
     [DataContract]
     public class MainCategories
     {

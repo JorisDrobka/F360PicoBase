@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -25,8 +26,6 @@ namespace F360.Backend.Messages
         public bool success;
     }
 
-
-    
 
     //-----------------------------------------------------------------------------------------------
     //
@@ -100,6 +99,26 @@ namespace F360.Backend.Messages
     //
     //-----------------------------------------------------------------------------------------------
 
+    /*
+        Benny's gute Fragen:
+
+        - Weitergabe des selbstlaufenden Desktop-Clients unterbinden?
+            - Seats / gleichzeitige Sessions per Account ("Arbeitsplätze")
+            - Anwesenheit der Brille
+            - simple: kein eigenständiges Abspielen des 360° Contents
+
+        - Lehrer-Accounts komplett redundant?
+            - minimal: Trennung in Master- und Useraccount 
+
+
+        - System-Account modellieren
+            - pw geschützt auf der Brille speichern (license-datei)
+
+
+
+    */
+
+
     [DataContract]
     public class CS_ServerAuthRequest
     {
@@ -109,7 +128,8 @@ namespace F360.Backend.Messages
         [DataMember]
         public string password;
 
-        public CS_ServerAuthRequest(string usr, string pass) {
+        public CS_ServerAuthRequest(string usr, string pass) 
+        {
             this.username = usr;
             this.password = pass;
         }
@@ -120,6 +140,94 @@ namespace F360.Backend.Messages
     {
         [DataMember]
         public string token;
+
+        [DataMember]
+        public SC_UserLoginInfo userInfo;
+
+        [DataMember]
+        string expires_in;       ///< how long session token is valid (in seconds)
+
+        public int ExpiresSeconds
+        {   
+            get {
+                if(__expiresSeconds <= 0) {
+                    double sec;
+                    if(System.Double.TryParse(expires_in, out sec))
+                    {
+                        __expiresSeconds = (int) sec;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("SC_ServerAuthResponse: Invalid expires_in parameter!");
+                    }
+                }
+                return __expiresSeconds;
+            }
+        }
+
+        public int ExpiresMinutes
+        {
+            get {
+                return ExpiresSeconds / 60;
+            }
+        }
+
+        public int ExpiresHours
+        {
+            get {
+                return ExpiresMinutes / 60;
+            }
+        }
+
+        int __expiresSeconds=-1;
+    }
+
+
+    [DataContract]
+    public class SC_UserLoginInfo
+    {
+        [DataMember]
+        public string username;
+
+        [DataMember]
+        public string email;
+
+        [DataMember]
+        public string[] groups;
+
+        [DataMember]
+        public int id;
+
+        [DataMember]
+        public bool is_active;
+
+        [DataMember]
+        string last_login;
+
+        [DataMember]
+        string date_joined;
+
+        public System.DateTime lastLogin { 
+            get {  
+                if(MessageUtil.TryParseDateTime(last_login, ref __parsedLoginDate))
+                {
+                    Debug.LogWarning("UserLoginInfo:: malformatted last_login string {" + last_login + "}");
+                }
+                return __parsedLoginDate;
+            } 
+        }
+        public System.DateTime joinDate { 
+            get {  
+                if(MessageUtil.TryParseDateTime(date_joined, ref __parsedJoinDate))
+                {
+                    Debug.LogWarning("UserLoginInfo:: malformatted date_joined string {" + date_joined + "}");
+                }
+                return __parsedJoinDate;
+            } 
+        }
+
+        System.DateTime __parsedLoginDate;
+        System.DateTime __parsedJoinDate;
     }
 
     //-----------------------------------------------------------------------------------------------
@@ -197,16 +305,9 @@ namespace F360.Backend.Messages
 
         public System.DateTime lastLogin { 
             get {  
-                if(__parsedLoginDate == default(System.DateTime)) {
-                    System.DateTime parsed;
-                    if(TimeUtil.ParseServerTimeFromString(last_login, out parsed))
-                    {
-                        __parsedLoginDate = parsed;
-                    }
-                    else
-                    {
-                        __parsedLoginDate = TimeUtil.ServerTime;        /// @TODO  TMP!!!
-                    }
+                if(MessageUtil.TryParseDateTime(last_login, ref __parsedLoginDate))
+                {
+                    Debug.LogWarning("UserInfo:: malformatted last_login string {" + last_login + "}");
                 }
                 return __parsedLoginDate;
             } 
@@ -292,10 +393,63 @@ namespace F360.Backend.Messages
 
     //-----------------------------------------------------------------------------------------------
     //
-    //  DEVICE INFO
+    //  DEVICE Registration
     //
     //-----------------------------------------------------------------------------------------------
     
+    public enum RegisterState
+    {
+        //  database states
+        Undefined=0,
+        ExistsInDatabase=1,
+        HasLicense=2,
+
+        //  response states
+        CreatedDatabaseEntry=3,
+        ReceivedLicense=4,
+
+        Error=5
+    }
+
+    [DataContract]
+    public class CS_RegisterRequest
+    {
+        [DataMember]
+        public int id;          ///< hardware serial
+    }
+
+    [DataContract]
+    public class SC_RegisterResponse
+    {
+        [DataMember]
+        public int state;
+
+        [DataMember]
+        public int level;       ///< patchlevel
+
+        [DataMember]
+        string register_date;   ///< date of registration.
+        
+
+        //  one-time fields
+
+        [DataMember]
+        public string key;      ///<  license key. only returned on 'success' state
+
+        [DataMember]
+        public string hash;     ///< license hash. only returned on 'success' state
+
+        [DataMember]
+        public string pass;     ///< system account password. only returned on 'success' state
+        
+        
+    }
+
+    //-----------------------------------------------------------------------------------------------
+    //
+    //  DEVICE INFO
+    //
+    //-----------------------------------------------------------------------------------------------
 
     [DataContract]
     public class SC_DeviceInfo
@@ -748,4 +902,36 @@ namespace F360.Backend.Messages
 
 
     #pragma warning restore
+
+
+
+
+    //-----------------------------------------------------------------------------------------------
+    //
+    //  UTIL
+    //
+    //-----------------------------------------------------------------------------------------------
+
+
+    public static class MessageUtil
+    {
+        public static bool TryParseDateTime(string input, ref DateTime time)
+        {
+            if(time == default(System.DateTime)) 
+            {
+                System.DateTime parsed;
+                if(TimeUtil.ParseServerTimeFromString(input, out parsed))
+                {
+                    time = parsed;
+                    return true;
+                }
+                else
+                {
+                    time = TimeUtil.ServerTime;        /// @TODO  TMP!!!
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
 }

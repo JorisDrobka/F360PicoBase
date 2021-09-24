@@ -61,7 +61,60 @@ namespace F360.Users
 
         //-----------------------------------------------------------------------------------------------------------------
 
-        //  interface
+        /// @brief
+        /// access to synched statistics
+        ///
+        public UserStats Stats
+        {
+            get {
+                if(__stats == null)
+                {
+                    __stats = new UserStats(ID);
+                    var repo = StatRepo.Current;
+                    if(repo != null)
+                    {
+                        repo.LoadStats(ID, ref __stats);
+                    }
+                }
+                return __stats;
+            }
+            set {
+                __stats = value;
+            }
+        }
+        UserStats __stats;
+
+
+        /// @brief  
+        /// access to synched metadata
+        ///
+        public UserMeta Meta {
+            get {
+                if(Stats != null) {
+                    return __stats.Meta;
+                }
+                return null;
+            }
+        }
+
+
+        public string Rented_Device
+        {
+            get {
+                if(Meta != null) {
+                    return Meta.Rented_Device;
+                }
+                return "";
+            }
+            set {
+                if(Meta != null) {
+                    Meta.Rented_Device = value;
+                }
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------------------------------
+
 
         /*public string RENTED_DEVICE 
         { 

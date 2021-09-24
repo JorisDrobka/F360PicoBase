@@ -10,17 +10,27 @@ namespace F360
     ///
     public enum AppLocation
     {
-        Loader,
 
+        //  Device States
+
+        Loader,
         Stopped,
         Sleep,
 
+        //  Sequences
         
-        Tutorial,
-        Menu_Dome,
-        Menu_CustomTrainer,
-        Menu_DriveVR_Selection,
-        Menu_Teacher_Tasks,
+        Start_Sequence,         ///< Initial setup (Warning, Wifi)
+        Tutorial,           
+        Menu_Dome,              ///< Loading / Transitioning to menu dome
+        
+
+        //  Menus
+
+        Menu_Main,
+        Menu_VTrainerOverview,
+        Menu_VTrainerChapter,
+        Menu_DriveVR,
+        Menu_Exam,
 
         Menu_TrainingPreview,
 
@@ -29,12 +39,21 @@ namespace F360
         Menu_UserSettings,
 
 
+        //  In Training
+
         Video_Exam,
         Video_ExamPlayback,
         Video_AwarenessTraining,
         Video_AwarenessPlayback,
         Video_DriveVR,
-        Video_DriveVRPlayback
+        Video_DriveVRPlayback,
+
+
+        //  Obsolete Locations
+
+        Menu_CustomTrainer,
+        Menu_DriveVR_Selection,
+        Menu_Teacher_Tasks,
     }
 
     
